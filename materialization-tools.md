@@ -4,15 +4,30 @@ title: Materialization Tools
 permalink: /materialization-tools/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## Tools for dedicated mapping languages
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+- Linked Stream Middleware (2012)
+- Morph-RDB v3.12.5 (2014)
+- RMLMapper v4.12.0 (2014)
+- Karma-Web v2.5 (2015)
+- Morph-xR2RML v1.3.1 (2015)
+- TripleWave v2.1.1 (2016)
+- GeoTriples v1.2.1 (2018)
+- D2RML processor (2018)
+- RDF-Gen (2018)
+- RMLStreamer v2.1.1 (2019)
+- MapSDI v1.0 (2019)
+- D-REPR v2.9.3 (2019)
+- RocketRML v1.11.3 (2019)
+- SDM-RDFizer v4.0 (2020)
+- FunMap v1.0 (2020)
+- Chimera v2.2 (2020)
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+## Tools for query-language-driven mapping languages
 
+- SPARQL-Generate v2.0.9 (2017)
+- SPARQL-Anything v0.4.1 (2021)
 
-[jekyll-organization]: https://github.com/jekyll
+## Tools for constraint-driven mapping languages
+
+- ShExML v0.2.6 (2020)
