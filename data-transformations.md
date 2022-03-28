@@ -47,8 +47,9 @@ However, SPARQL functions cannot be used standalone because of their tight integ
 SPARQL functions are integrated in SPARQL queries as a SPARQL operator and can be applied on any part of the schema transformation (F5).
 SPARQL functions are leveraged by [SPARQL-Generate](https://github.com/sparql-generate/sparql-generate) [76], [XSPARQL](https://github.com/semantalytics/xsparql) [13] and Facade-X [31] to provide data transformations.
 
+
 #### GeoTriples (2014)
-[GeoTriples](https://github.com/LinkedEOData/GeoTriples) [73, 71] extends RML [42] with support for geographical data sources and transformations.
+GeoTriples [73, 71] extends RML [42] with support for geographical data sources and transformations.
 GeoTriples uses [GeoSPARQL](https://www.opengis.net/doc/IS/geosparql/1.0) [9] and stSPARQL [72, 11] functions which are aligned with RML mapping rules through two extensions: rrx:Function and rrx:ArgumentMap.
 The parameters order in rrx:ArgumentMap matches the order of arguments of the function (rdf:List).
 Each function parameter is an rr:TermMap which allows GeoTriples to reference values as function parameters.
@@ -56,6 +57,10 @@ The return value is used directly in the mapping rules and are not declarative d
 GeoTriples supports a fixed set of GeoSPARQL and stSPARQL functions (F3) as data transformations, but these functions are not depending on GeoTriples.
 Therefore, GeoSPARQL and stSPARQL functions can be used with other GeoSPARQL and stSPARQL engines (F4).
 Currently, GeoSPARQL and stSPARQL functions are built-in into the GeoSPARQL query language [92], and not shared through a repository as FnO (F2).
+
+**Source code** : https://github.com/LinkedEOData/GeoTriples
+<br>
+**Last accessed** : 10/11/2021
 
 #### KR2RML (2015)
 KR2RML [107] is based on R2RML [32] with support for data transformations through custom functions and conditions written in Python (F3).
@@ -65,6 +70,7 @@ Function parameters and return values are hardcoded in the KR2RML mapping rules 
 KR2RML functions are implemented in Karma-Web.
 
 **Source code** : https://github.com/usc-isi-i2/Web-Karma
+<br>
 **Last accessed** : 10/11/2021
 
 #### Function Ontology (FnO, 2016)
@@ -94,6 +100,7 @@ Depending on the programming language and implementation, functions can be share
 FunUL is demonstrated in a forked version of the RMLProcessor.
 
 **Source code** : https://github.com/CNGL-repo/RMLProcessor
+<br>
 **Last accessed** : 10/11/2021
 
 #### D2RML (2018)
@@ -117,6 +124,7 @@ Since these functions are described in the [preprocessing]) block, they cannot b
 D-REPR’s data transformations are implemented in D-REPR.
 
 **Source code** : https://github.com/usc-isi-i2/d-repr
+<br>
 **Last accessed** : 10/11/2021
 
 Table 3

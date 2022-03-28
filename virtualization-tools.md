@@ -15,7 +15,9 @@ and is written in Scala (T8). Morph-RDB is accessible as a CLI implementation an
 MorphRDB’s extension is released38 (T12) under the Apache License 2.0 (T11).
 
 **Source code** : https://github.com/oeg-upm/morph-rdb
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** :  08/05/2021
 
 
@@ -34,7 +36,9 @@ Ontop is available as a CLI implementation and Docker image (T9, T10).
 Ontop is written in Java (T8) and released42 (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/ontop/ontop
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 21/03/2022
 
 #### Optique (2013)
@@ -44,9 +48,6 @@ These SQL queries are executed on Optique’s DSMS ExaStream [109, 89].
 Optique’s DSMS allows custom data transformations using User Defined Functions (T6) which are leveraged in Optique to access external data sources, windowing, and data mining.
 Optique is not publicly available, therefore we cannot evaluate characteristics T7, T9, T10, T11, T12, T13a, and T13b.
 
-**Source code** :
-**Last accessed** : 23/02/2022
-**Date last commit on default branch** :
 
 #### XGSN v2.0.1 (2014)
 XGSN [19] leverages Global Sensor Networks (GSN) middleware to provide virtualization over Internet of Things sensors using the W3C recommended SSN ontology [50] (T5).
@@ -60,7 +61,9 @@ XGSN is written in Java (T8) as a CLI implementation and can be accessed through
 XGSN is available on Github (T12) under the GNU General Public License v3.0 (T11).
 
 **Source code** : https://github.com/LSIR/gsn
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 12/03/2017
 
 #### Morph-RDB v3.12.5 (2014)
@@ -72,7 +75,9 @@ MorphRDB is accessible as a CLI implementation written in Scala (T8) and provide
 Morph-RDB is released (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/oeg-upm/morph-rdb
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 08/05/2021
 
 #### Morph-xR2RML v1.3.1 (2015)
@@ -83,7 +88,9 @@ Untranslated parts of the query are processed by xR2RML client-side.
 Morph-xR2RML provides a CLI implementation written in Scala (T8) or as a SPARQL endpoint (T9, T10) and is available (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/frmichel/morph-xr2rml
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 13/01/2022
 
 #### SparqlMap-M v0.7.4 (2016)
@@ -94,7 +101,9 @@ SparqlMap-M does not implement support for SPARQL Federated Queries (T13b).
 SparqlMap-M is written in Java (T8) and available as a CLI implementation or SPARQL endpoint on Github without a license (T9, T10, T11, T12).
 
 **Source code** : https://github.com/tomatophantastico/sparqlmap
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 31/08/2017
 
 #### Morph-streams++ v1.0.10 (2016)
@@ -107,7 +116,9 @@ Morph-streams++ does not support any data transformations (T6, T7), or federatio
 Morph-streams++ is written in Scala (T8) and released (T12) as a CLI implementation without license (T9, T10, T11).
 
 **Source code** : https://github.com/jpcik/morph-streams
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** :  28/09/2016
 
 #### Squerall v0.2 (2019)
@@ -121,7 +132,9 @@ Squerall can access Apache Parquet, CSV files, relational databases with JDBC co
 Squerall is written in Java (T8) and available under Apache License 2.0 (T12) as a CLI implementation and via a GUI (T9, T10).
 
 **Source code** : https://github.com/EIS-Bonn/Squerall
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** :  10/09/2021
 
 #### Ontario (2019)
@@ -133,7 +146,9 @@ It implements SPARQL Federated Queries via SPARQL’s SERVICE operator (T13b), b
 Ontario is written in Python (T8) available as CLI implementation under the General Public License 2.0 (T9, T10, T11 T12).
 
 **Source code** : https://github.com/SDM-TIB/Ontario
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 09/03/2021
 
 #### Obi-Wan (2020)
@@ -145,7 +160,9 @@ To the best of our knowledge, Obi-Wan does not support data transformations (T6,
 ObiWan is available as CLI implementation and webapp on Gitlab under MIT license (T9, T10, T11 T12).
 
 **Source code** : https://gitlab.inria.fr/cedar/obi-wan
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 22/10/2021
 
 

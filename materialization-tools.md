@@ -25,7 +25,9 @@ Morph-RDB is accessible as a CLI implementation and provides a Docker image (T9,
 Morph-RDB is released on Github (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/oeg-upm/morph-rdb
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** :  08/05/2021
 
 #### RMLMapper v4.12.0 (2014)
@@ -43,7 +45,9 @@ RMLMapper is available as a CLI implementation, a Docker image, and a Java libra
 The RMLMapper is released under MIT license (T11) on Github (T12).
 
 **Source code** : https://github.com/RMLio/rmlmapper-java
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 11/03/2022
 
 #### Karma-Web v2.5 (2015)
@@ -58,7 +62,9 @@ KarmaWeb supports JSON-LD and N3 as RDF output formats (T4).
 Karma-Web is publicly available (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/usc-isi-i2/Web-Karma
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 27/02/2022
 
 #### Morph-xR2RML v1.3.1 (2015)
@@ -71,7 +77,9 @@ Morph-xR2RML is configured with a configuration file and provides a CLI implemen
 Morph-xR2RML supports N-Triples, Turtle, N3, RDF/XML, and JSON-LD as RDF output format. Morph-xR2RML is available on Github (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/frmichel/morph-xr2rml
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 13/01/2022
 
 #### TripleWave v2.1.1 (2016)
@@ -85,7 +93,9 @@ It is configured with a configuration file to export its RDF stream in JSON-LD f
 TripleWave is written in NodeJS (T8) and it is available under Apache License 2.0 (T11) on Github (T12) as a CLI implementation (T9, T10).
 
 **Source code** : https://github.com/streamreasoning/TripleWave
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 10/07/2019
 
 #### GeoTriples v1.2.1 (2018)
@@ -98,7 +108,9 @@ It first fetches all geospatial data, applies transformations and joins if neede
 GeoTriples is available as a CLI implementation or webapp (T9, T10) and it is released (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/LinkedEOData/GeoTriples
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 10/09/2021
 
 #### D2RML processor (2018)
@@ -115,7 +127,9 @@ RDF-Gen exports RDF in N-Triples or Turtle to a file specified in its configurat
 RDF-Gen is available as compiled Java Jar CLI implementation (T9, T10, T12) under Creative Commons Attribution-NonCommercialNoDerivatives 4.0 International License (T11).
 
 **Source code** : https://github.com/datAcron-project/RDF-Gen
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 18/07/2019
 
 #### RMLStreamer v2.1.1 (2019)
@@ -128,7 +142,9 @@ The RMLStreamer can export RDF graphs in JSON-LD, N-Triples, or N-Quads format (
 It is written in Scala (T8) and available (T12) under MIT license (T11) as a CLI implementation and Docker image (T9, T10).
 
 **Source code** : https://github.com/RMLio/RMLStreamer
-**Last accessed** : 23/03/2022,
+<br>
+**Last accessed** : 23/03/2022
+<br>
 **Date last commit on default branch** : 25/02/2022
 
 #### MapSDI v1.0 (2019)
@@ -138,7 +154,9 @@ MapSDI leverages existing RML processors to execute the mapping rules, therefore
 MapSDI can preprocess files in CSV format (T1, T2), is written in Python (T8) and available (T12) as a CLI implementation (T9, T10) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/SDM-TIB/MapSDI
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 25/10/2021
 
 #### D-REPR v2.9.3 (2019)
@@ -150,7 +168,9 @@ D-REPR can export its RDF to a file as Turtle or a custom JSON format (T3, T4).
 DREPR is available on Github (T12) under MIT license as a CLI implementation and webapp (T9, T10, T11).
 
 **Source code** : https://github.com/usc-isi-i2/d-repr/
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 14/06/2021
 
 #### RocketRML v1.11.3 (2019)
@@ -163,7 +183,9 @@ It is available as a NodeJS package on NPM, CLI implementation, Docker image, or
 RocketRML is released31 (T12) under Creative Commons AttributionNonCommercial-ShareAlike 4.0 International license (T11).
 
 **Source code** : https://github.com/semantifyit/RocketRML
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 30/11/2021
 
 #### SDM-RDFizer v4.0 (2020)
@@ -179,7 +201,9 @@ RDF graphs are exported to a file (T3).
 SDM-RDFizer is available as a CLI implementation, Docker container or a Python module on the Python Package Index (T9, T10) and released32 (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/SDM-TIB/SDM-RDFizer
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 18/03/2022
 
 #### FunMap v1.0 (2020)
@@ -190,7 +214,9 @@ FunMap leverages existing RML processors to execute the mapping rules, therefore
 FunMap is available as a CLI implementation (T9, T10) and released33 (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/SDM-TIB/FunMap
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 09/01/2021
 
 #### Chimera v2.2 (2020)
@@ -205,7 +231,9 @@ Since Chimera re-uses the RMLMapper, it inherits its characteristics (T1, T2, T3
 Chimera is released34 (T12) as a CLI implementation under Apache License 2.0 and the RMLMapper extension under MIT license (T9, T10, T11).
 
 **Source code** : https://github.com/cefriel/chimera
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** : 01/10/2021
 
 
@@ -222,6 +250,7 @@ SPARQL-Generate is available as a CLI implementation, a Java library, a webapp, 
 It is released35 (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/sparql-generate/sparql-generate
+<br>
 **Last accessed** : 10/11/2021
 
 #### SPARQL-Anything v0.4.1 (2021)
@@ -236,7 +265,9 @@ The generated RDF graphs are exported to a file or are available through a Fusek
 SPARQL-Anything is available as a CLI implementation or a SPARQL endpoint (T9, T10) and released36 (T12) under Apache License 2.0 (T11).
 
 **Source code** : https://github.com/SPARQL-Anything/sparql.anything
+<br>
 **Last accessed** : 23/03/2022
+<br>
 **Date last commit on default branch** : 18/03/2022
 
 ## Tools for constraint-driven mapping languages
@@ -250,7 +281,9 @@ ShExML does not provide any data transformations such as FnO (T6, T7).
 ShExML is available as a CLI implementation, Java library, and a webapp (T9, T10) and released on Github37 (T12) under the MIT license (T1) 
 
 **Source code** : https://github.com/herminiogg/ShExML
+<br>
 **Last accessed** : 23/02/2022
+<br>
 **Date last commit on default branch** :28/02/2022
 
 
