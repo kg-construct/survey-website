@@ -61,8 +61,15 @@ The following terms and combinations were considered in this systematic review:
 - `("generation" OR "construction") AND "R2RML" AND ("knowledge graph" OR "knowledge graphs" OR "Linked Data" OR "Linked Open Data" OR "LOD")`
 - `("stream" OR "streams" OR "streaming") AND ("RDF" OR "Resource Description Framework") AND "SPARQL"`
 
+### Collections
+
+- Digital Libraries: 
+- Journals: 
+- Conferences: 
+- Workshops: 
+
 ## Step 2: Review titles & abstracts
-We searched for these terms in the article’s title and abstract 
+We searched for these terms in the article's title and abstract 
 to avoid a high number of irrelevant articles in comparison 
 to searching in the article's full text.
 An article is selected when at least one of the combined terms has been found
@@ -136,9 +143,18 @@ to include more relevant articles:
 We searched for potentially relevant articles through the references 
 of other relevant articles. 
 This way, we discovered 3 more potentially relevant articles. 
-We also manually added 4 more articles which we found relevant for this survey.
-This result in 1736 articles in total.
-We indicated these 7 articles in the below table with a '*'.
+We also manually added 3 more articles which we found relevant for this survey.
+This result in 1735 articles in total.
+We indicated these 6 articles in the tables below with a '*'.
+
+| Title                                                                                                     | Author(s)                  | Scope      |
+| --------------------------------------------------------------------------------------------------------- | -------------------------- | ---------- |
+| A middleware framework for scalable management of linked streams*                                         | Le-Phuoc D. et al.         | MT         |
+| Exploiting Declarative Mapping Rules for Generating GraphQL Servers with Morph-GraphQL*                   | Chaves-Fraga D. et al.     | VT         |
+| Implementation-independent function reuse*                                                                | De Meester B. et al.       | DT         |
+| LDScript: A Linked Data Script Language*                                                                  | Corby O. et al.            | DT         |
+| Querying the Web of Data with XSPARQL 1.1*                                                                | Dell'Aglio D. et al.       | ML, DT     |
+| Turning Transport Data to Comply with EU Standards While Enabling a Multimodal Transport Knowledge Graph* | Scrocca M. et al.          | MT         |
 
 ## Step 4: Reviewing potential articles for inclusion
 
