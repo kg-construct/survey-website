@@ -86,7 +86,7 @@ Does the implementation support federation or not?
 
 ### Morph-RDB extension (2010)
 Morph-RDB extension enables Ontology-Based Data Access
-to streaming data sources by extending R<sup>2</sup>O mapping rules
+to streaming data sources by extending R<sub>2</sub>O mapping rules
 with streaming support (S<sub>2</sub>O mapping rules) (T5)
 and querying these data sources with SPARQLStream (T13a).
 Morph-RDB's SPARQLStream is inspired
