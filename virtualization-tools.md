@@ -4,7 +4,79 @@ title: Virtualization Tools
 permalink: /virtualization-tools/
 ---
 
-#### Morph-RDB extension (2010)
+## Characteristics
+
+We compiled a list of common characteristics
+which differ between implementations:
+
+### Input/Output
+
+These characteristics are related to the input data,
+output data and which schema and data transformations
+are used by each implementation:
+
+- **T1: Input Data**:
+Which data sources are accessible and data can be retrieved from.
+- **T2: Input Data formats**:
+Which data formats are supported for the input data.
+- **T3: Output Data**:
+How the generated knowledge graphs are exported
+to a specific location in a certain format.
+- **T4: Output Data formats**:
+Which data formats are supported for the output data.
+- **T5: Schema transformation language**: 
+Which mapping language(s) are supported by an implementation.
+
+### Data transformation
+
+Each implementation may have support for data transformations
+besides schema transformations.
+The following characteristics are used to validate how
+and which data transformations are supported by a given implementation:
+
+- **T6: Data transformation language**:
+Which data transformation language(s) are supported by an implementation.
+- **T7: Applicability**:
+Where during the execution process does 
+the implementation apply data transformations to the data:
+(i) pre-processing, during the input data retrieval,
+(ii) during schema transformation into RDF,
+(iii) post-processing, after the schema transformation?
+
+### Implementation
+
+Each implementation has specific characteristics
+regarding the implementation itself such as
+the programming language or how it integrates with other implementations.
+
+- **T8: Programming language**: 
+The programming language of the implementation.
+- **T9: Integration**:
+How a implementation can be integrated with other implementations.
+- **T10: Interface**:
+How a implementation can be used.
+- **T11: License**:
+The license of an implementation.
+- **T12: Repository**:
+The location of the implementation's code repository, if available.
+
+### Virtualization-specific characteristics
+
+We studied each virtualization implementation
+and created a list of characteristics which are specific
+for virtualization tools:
+
+- **T13a: Features**
+Each implementation has its own set 
+of features regarding virtual access to its heterogeneous data sources.
+Which features are applied to the virtualization process?
+- **T13b: Federation**
+Virtualization systems access multiple data sources typically using federation.
+Does the implementation support federation or not?
+
+## Virtualization tools
+
+### Morph-RDB extension (2010)
 Morph-RDB extension enables Ontology-Based Data Access to streaming data sourcesby extending R2O mapping rules with streaming support (S2O mapping rules) (T5) and querying these data sources with SPARQLStream (T13a).
 Morph-RDB’s SPARQLStream is inspired by C-SPARQL and SNEEql but with support for streaming windows and SPARQL 1.1 aggregates.
 Morph-RDB transforms SPARQLStream queries into SNEE queries (SNEEql), the SNEE engine executes the query on the data sources.
@@ -21,7 +93,7 @@ MorphRDB’s extension is released38 (T12) under the Apache License 2.0 (T11).
 **Date last commit on default branch** :  08/05/2021
 
 
-#### Ontop v4.1.1 (2013)
+### Ontop v4.1.1 (2013)
 Ontop virtualizes access to relational SQL databases and OpenGIS by translating SPARQL queries into SQL queries.
 It leverages R2RML mapping rules or Ontop Mapping Language (T5) to perform this translation, and extensions for accessing OpenGIS data (T1, T2).
 Generated triples are returned as SPARQL query results (T3, T4).
@@ -41,7 +113,7 @@ Ontop is written in Java (T8) and released42 (T12) under Apache License 2.0 (T11
 <br>
 **Date last commit on default branch** : 21/03/2022
 
-#### Optique (2013)
+### Optique (2013)
 Optique leverages R2RML mapping rules  (T5) to access data such as relational databases, triple stores, temporal databases, data streams, etc.
 Optique uses STARQL as query language for streaming data which is translated into SQL queries (T1, T2).
 These SQL queries are executed on Optique’s DSMS ExaStream.
@@ -49,7 +121,7 @@ Optique’s DSMS allows custom data transformations using User Defined Functions
 Optique is not publicly available, therefore we cannot evaluate characteristics T7, T9, T10, T11, T12, T13a, and T13b.
 
 
-#### XGSN v2.0.1 (2014)
+### XGSN v2.0.1 (2014)
 XGSN leverages Global Sensor Networks (GSN) middleware to provide virtualization over Internet of Things sensors using the W3C recommended SSN ontology (T5).
 XGSN uses wrappers to interface with sensors such as UDP, serial, HTTP, MQTT, etc. (T1, T2, T6).
 Data transformations are applied in the data wrappers when accessing the input data (T7).
@@ -66,7 +138,7 @@ XGSN is available on Github (T12) under the GNU General Public License v3.0 (T11
 <br>
 **Date last commit on default branch** : 12/03/2017
 
-#### Morph-RDB v3.12.5 (2014)
+### Morph-RDB v3.12.5 (2014)
 Morph-RDB – also discussed in section 5.3 as materialization implementation – supports virtualization for relational databases such as MySQLPostgresSQL, H2, and MonetDB or files in CSV format (T1, T2) through R2RML mapping rules (T5).
 Morph-RDB translates unions, filters and aggregation from SPARQL to SQL to reduce the client-side processing (T13a).
 MorphRDB applies two types of well-known optimizations (T13a) on SQL queries: (i) self-join elimination, and (ii) subquery elimination.
@@ -80,7 +152,7 @@ Morph-RDB is released (T12) under Apache License 2.0 (T11).
 <br>
 **Date last commit on default branch** : 08/05/2021
 
-#### Morph-xR2RML v1.3.1 (2015)
+### Morph-xR2RML v1.3.1 (2015)
 Morph-xR2RML, also discussed in Section 5.3 as ETL implementation, is a fork or Morph-RDB which translates SPARQL queries into SQL queries and MongoDB queries using xR2RML mapping rules (T1, T2, T5, T13a). Morph-xR2RML does not
 support data transformations (T6) and not all operators of SPARQL such as joins and some filters, therefore the query is translated in two steps: (i) an abstract query is generated from the SPARQL query using the xR2RML mapping rules.
 (ii) the abstract query is translated into MongoDB queries.
@@ -93,7 +165,7 @@ Morph-xR2RML provides a CLI implementation written in Scala (T8) or as a SPARQL 
 <br>
 **Date last commit on default branch** : 13/01/2022
 
-#### SparqlMap-M v0.7.4 (2016)
+### SparqlMap-M v0.7.4 (2016)
 SparqlMap-M is an extension of SparqlMap to provide virtualization over CSV files, relational databases, and non-relational databases using R2RML mapping rules (T5).
 SparqlMap-M extends R2RML to support data transformations and conditions (T6) which are executed during the schema transformation (T7).
 SparqlMap-M analyses SPARQL queries to reduce the R2RML mappings to the minimum for answering the query and translates to SQL to execute the query on the the database engine (T13a).
@@ -106,7 +178,7 @@ SparqlMap-M is written in Java (T8) and available as a CLI implementation or SPA
 <br>
 **Date last commit on default branch** : 31/08/2017
 
-#### Morph-streams++ v1.0.10 (2016)
+### Morph-streams++ v1.0.10 (2016)
 Morph-streams++ is the successor of the extended Morph-RDB and leverages SPARQLStream queries.
 Morph-streams++ uses existing Distributed Stream Management Systems (DSMS) to execute SPARQLStream queries with R2RML mapping rules (T5).
 The SPARQLStream queries are first translated into queries supported by the underlying DSMS and its results are translated into RDF with R2RML mapping rules (T13a).
@@ -121,7 +193,7 @@ Morph-streams++ is written in Scala (T8) and released (T12) as a CLI implementat
 <br>
 **Date last commit on default branch** :  28/09/2016
 
-#### Squerall v0.2 (2019)
+### Squerall v0.2 (2019)
 Squerall answers SPARQL queries over heterogeneous data sources that are mapped to RDF with RML (T5) and FnO functions (T6).
 Squerall leverages the distributed data processing systems Spark or Presto: both systems use an internal tabular data format into which different data sources can be (virtually) integrated.
 Spark and Presto allow the manipulation of multiple heterogeneous data sources in a uniform, SQL(-like) manner.
@@ -137,7 +209,7 @@ Squerall is written in Java (T8) and available under Apache License 2.0 (T12) as
 <br>
 **Date last commit on default branch** :  10/09/2021
 
-#### Ontario (2019)
+### Ontario (2019)
 Ontario provides virtualization over a set of SPARQL endpoints and non-SPARQL database interfaces using RML mapping rules (T5).
 It translates queries into star shapes subqueries (T13a) and are combined with RML mapping rules to select the right SPARQL endpoint to answer the subquery.
 The results of each subquery are joined locally (T13a).
@@ -151,7 +223,7 @@ Ontario is written in Python (T8) available as CLI implementation under the Gene
 <br>
 **Date last commit on default branch** : 09/03/2021
 
-#### Obi-Wan (2020)
+### Obi-Wan (2020)
 Obi-Wan is a Java-based (T8) virtualization implementation for data stored in relational and non-relational databases.
 Obi-Wan uses a custom GlobalLocal As View (GLAV) mapping language (T5) to link heterogeneous data to an RDF representation. Obi-Wan supports relational databases e.g. PostgreSQL, non-relational databases e.g. MongoDB, Redis, and triple stores e.g. Jena TDB (T1, T2).
 Obi-Wan supports multiple entailment strategies such as query rewriting, mapping saturation, and hybrid rewriting-saturation (T13a).
@@ -165,8 +237,7 @@ ObiWan is available as CLI implementation and webapp on Gitlab under MIT license
 <br>
 **Date last commit on default branch** : 22/10/2021
 
-
-Table 6
+## Tables
 
 | Ontop               | R2RML or Ontop Mapping Language | No                     | NA                                     | Java   | CLI                   | Apache-2.0 | SQL & virtualization optimizations, aggregation on databases, ontological entailement | with Denodo, Dremio or Teiid |
 | ------------------- | ------------------------------- | ---------------------- | -------------------------------------- | ------ | --------------------- | ---------- | ------------------------------------------------------------------------------------- | ---------------------------- |
@@ -178,8 +249,6 @@ Table 6
 | Morph-RDB extension | S 2 O                           | No                     | NA                                     | Scala  | CLI, Docker           | Apache-2.0 | Inherited from Morph-RDB                                                              | with SNEEql                  |
 | XGSN                | SSN ontology                    | Hardcoded in wrapper   | together, pre-processing of input data | Java   | CLI, webapp, API      | GPL-3.0    | Access delegated to RDF stream processor                                              | No                           |
 | Obi-Wan             | custom GLAV mapping             | No                     | NA                                     | Java   | CLI, webapp           | MIT        | Ontology entailment                                                                   | with Tatooine                |
-
-Table 7
 
 | Characteristic             | Morph-streams++    | Ontop              | Morph-RDB          | Morph-xR2RML       | SparqlMap-M        | Squerall           | Ontario            | Morph-RDB extension | Obi-Wan            | XGSN               |
 |----------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|---------------------|--------------------|--------------------|
