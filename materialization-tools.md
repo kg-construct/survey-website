@@ -60,6 +60,16 @@ The license of an implementation.
 - **T12: Repository**:
 The location of the implementation's code repository, if available.
 
+### Materialization-specific characteristics
+We studied each materialization implementation and created
+a list of characteristics specific for materialization which
+greatly differ between these implementations:
+
+- **T13a: Optimizations**
+Which optimizations are applied to the materialization process?
+- **T13b: Scaling**
+Which approaches are used to scale the materialization process?
+
 ## Tools for dedicated mapping languages
 
 ### Linked Stream Middleware (2012)
