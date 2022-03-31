@@ -7,7 +7,15 @@ permalink: /materialization-tools/
 ## Characteristics
 
 We compiled a list of common characteristics
-which differ between implementations:
+which differ between implementations.
+We divided them in 4 categories:
+
+1. Input/Output
+2. Data transformation
+3. Implementation
+4. Materialization-specific characteristics
+
+The first 3 categories are shared with the virtualization tools.
 
 ### Input/Output
 

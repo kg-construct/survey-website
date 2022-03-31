@@ -6,6 +6,13 @@ permalink: /schema-transformations/
 
 ## Characteristics
 
+We created a list of characteristics for schema transformations and divided
+them in 3 categories:
+
+1. Declarative transformation description
+2. Data processing and composition
+3. Coverage of the RDF(S) specification
+
 ### Declarative transformation description
 Mapping languages declaratively describe in different ways
 how schema and data transformations are applied on input data.
