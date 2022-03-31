@@ -10,31 +10,28 @@ We derived a set of characteristics and divided them in 2 categories:
 1. Description
 2. Alignment
 
-### 1. Description
+### Description
 The way in which a data transformation is described such as function's body 
 or its parameters.
 
-#### F1: Declarativeness
+- **F1: Declarativeness**
 If the data transformations are declaratively described,
 considering the function body, parameter values, and return values.
-
-#### F2: Shareability
+- **F2: Shareability**
 If data transformations can be shared and re-used 
 through a common repository or library.
-
-#### F3: Custom data transformations
+- **F3: Custom data transformations**
 If custom data transformations can be described declaratively
 and be used with existing data transformations.
 
-### 2. Alignment
+### Alignment
 How the data transformations are aligned with mapping languages
 and if they can be used standalone or not.
 
-#### F4: Independence
+- **F4: Independence**
 The data transformation description depends 
 on certain mapping languages or implementations.
-
-#### F5: Integration with mapping languages
+- **F5: Integration with mapping languages**
 How mapping languages integrate the data transformations,
 interact with them and describe them in the mapping rules.
 
