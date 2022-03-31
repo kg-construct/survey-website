@@ -538,7 +538,7 @@ T2: Data format characteristic for each materialization tool._
 <!-- T3 -->
 <div markdown="span" style="text-align: center;">
 _**Table 3:**
-T3: Data Output characteristic for each materialization tool._
+T3 & T4: Output data & formats characteristic for each materialization tool._
 </div>
 {% include tables/materialization-table3.html %}
 
