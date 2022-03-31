@@ -27,7 +27,7 @@ Which data formats are supported for the output data.
 - **T5: Schema transformation language**: 
 Which mapping language(s) are supported by an implementation.
 
-**Data transformation**
+### Data transformation
 
 Each implementation may have support for data transformations
 besides schema transformations.
@@ -43,7 +43,7 @@ the implementation apply data transformations to the data:
 (ii) during schema transformation into RDF,
 (iii) post-processing, after the schema transformation?
 
-**Implementation**
+### Implementation
 
 Each implementation has specific characteristics
 regarding the implementation itself such as
