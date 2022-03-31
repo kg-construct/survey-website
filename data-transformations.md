@@ -35,18 +35,6 @@ on certain mapping languages or implementations.
 How mapping languages integrate the data transformations,
 interact with them and describe them in the mapping rules.
 
-### Overview
-
-| Data Transformation | F1                                                           | F2                       | F3        | F4               | F5                                          |
-|---------------------|--------------------------------------------------------------|--------------------------|-----------|------------------|---------------------------------------------|
-| SPARQL Functions    | declarative described, referenced function & parameters      | Federated Queries        | Yes       | Depend on SPARQL | Any                                         |
-| GeoTriples          | declarative described, referenced function & parameters      | No                       | No        | Standalone       | R2RML or RML                                |
-| KR2RML              | function body and parameters as hardcoded strings            | Python Package Index     | Yes       | Depend on KR2RML | KR2RML-only                                 |
-| Function Ontology   | declarative described, referenced function & parameters      | Function Hub             | Yes       | Standalone       | Any                                         |
-| FunUL               | function body as string, referenced function & parameters    | Implementation dependent | Yes       | Depend on RML    | RML-only                                    |
-| D2RML               | declarative described, referenced function & parameters      | No                       | Partially | Depend on D2RML  | D2RML-only, only pre-processing input data  |
-| D-REPR              | function body and parameters as string, hardcoded parameters | Python Package Index     | Yes       | Depend on D-REPR | D-REPR-only, only pre-processing input data |
-
 ## Data transformations
 In this section, we analyzed 7 data transformation approaches
 on 5 different characteristics to provide an overview of these approaches.
@@ -224,3 +212,15 @@ D-REPR's data transformations are implemented in D-REPR.
 <br>
 **Last accessed** : 10/11/2021
 
+## Table
+
+<!-- Table -->
+<div markdown="span" style="text-align: center;">
+_**Table 1:**
+Characteristics F1 until F5 for data transformations._
+</div>
+
+{% include tables/data-transformations-table1.html %}
+
+<!-- DataTables setup -->
+{% include tables/data-transformations-datatables.html %}

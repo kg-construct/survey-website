@@ -1,0 +1,23 @@
+<!-- DataTables JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/autofill/2.3.9/js/dataTables.autoFill.min.js"></script>
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/autofill/2.3.9/css/autoFill.dataTables.min.css">
+
+<!-- DataTables configuration -->
+<script>
+$(document).ready(function() {
+    var data_transformations_t1 = $('#data-transformations-t1').dataTable( {
+        scrollY: 400,
+        scrollX: 600,
+        scrollCollapse: true,
+        paging: false,
+        autoFill: true,
+        bFilter: false,
+        bSort: false,
+    } );
+} );
+</script>
