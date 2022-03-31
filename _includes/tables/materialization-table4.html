@@ -1,0 +1,193 @@
+<table id="materialization-t4" class="display">
+  <thead>
+    <tr>
+      <th>Materialization implementation</th>
+      <th>T5</th>
+      <th>T6</th>
+      <th>T7</th>
+      <th>T8</th>
+      <th>T9 and<br>T10</th>
+      <th>T11</th>
+      <th>T13a</th>
+      <th>T13b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Karma-Web</td>
+      <td>KR2RML</td>
+      <td>Python code snippets</td>
+      <td>together, during schema transformation</td>
+      <td>Python</td>
+      <td>CLI</td>
+      <td>Apache-2.0</td>
+      <td>None</td>
+      <td>ETL</td>
+    </tr>
+    <tr>
+      <td>Morph-RDB</td>
+      <td>R2RML</td>
+      <td>No</td>
+      <td>NA</td>
+      <td>Scala</td>
+      <td>CLI</td>
+      <td>Apache-2.0</td>
+      <td>Self-join and subquery elimination</td>
+      <td>ETL</td>
+    </tr>
+    <tr>
+      <td>Morph-xR2RML</td>
+      <td>xR2RML</td>
+      <td>No</td>
+      <td>NA</td>
+      <td>Scala</td>
+      <td>CLI, SPARQL endpoint</td>
+      <td>Apache-2.0</td>
+      <td>Inherited from Morph-RDB</td>
+      <td>ETL</td>
+    </tr>
+    <tr>
+      <td>TripleWave</td>
+      <td>R2RML</td>
+      <td>Hardcoded</td>
+      <td>together, pre-processing of input data</td>
+      <td>NodeJS</td>
+      <td>CLI</td>
+      <td>Apache-2.0</td>
+      <td>Vertical scaling</td>
+      <td>Streaming</td>
+    </tr>
+    <tr>
+      <td>GeoTriples</td>
+      <td>RML with GeoTriples extensions</td>
+      <td>GeoSPARQL &amp; stSPARQL functions</td>
+      <td>together, during schema transformation</td>
+      <td>Java</td>
+      <td>CLI, webapp</td>
+      <td>Apache-2.0</td>
+      <td>None</td>
+      <td>ETL</td>
+    </tr>
+    <tr>
+      <td>RMLMapper</td>
+      <td>RML</td>
+      <td>FnO</td>
+      <td>together, during schema transformation</td>
+      <td>Java</td>
+      <td>CLI, library, Docker</td>
+      <td>MIT</td>
+      <td>None</td>
+      <td>ETL</td>
+    </tr>
+    <tr>
+      <td>RMLStreamer</td>
+      <td>RML</td>
+      <td>FnO</td>
+      <td>together, during schema transformation</td>
+      <td>Scala</td>
+      <td>CLI, Docker</td>
+      <td>MIT</td>
+      <td>Horizontal and vertical scaling</td>
+      <td>Streaming</td>
+    </tr>
+    <tr>
+      <td>MapSDI</td>
+      <td>RML</td>
+      <td>NA</td>
+      <td>NA</td>
+      <td>Python</td>
+      <td>CLI</td>
+      <td>Apache-2.0</td>
+      <td>Removal of unused and duplicate data, relational algebra</td>
+      <td>Inherited from mapping rule processor</td>
+    </tr>
+    <tr>
+      <td>RocketRML</td>
+      <td>RML</td>
+      <td>FnO</td>
+      <td>together, during schema transformation</td>
+      <td>NodeJS</td>
+      <td>CLI, library, Docker, webapp</td>
+      <td>CC-BY-SA-4.0</td>
+      <td>Multiple XML parsers</td>
+      <td>ETL</td>
+    </tr>
+    <tr>
+      <td>SDM-RDFizer</td>
+      <td>RML</td>
+      <td>No</td>
+      <td>NA</td>
+      <td>Python</td>
+      <td>CLI, library, Docker</td>
+      <td>Apache-2.0</td>
+      <td>Removal of unused and duplicate data, relational algebra, memory optimizations</td>
+      <td>Batch processing</td>
+    </tr>
+    <tr>
+      <td>D-REPR</td>
+      <td>D-REPR</td>
+      <td>Python code snippets</td>
+      <td>together, pre-processing of input data</td>
+      <td>Python &amp; Rust</td>
+      <td>CLI, webapp, Docker</td>
+      <td>MIT</td>
+      <td>Execution plans, core processing in native programming language</td>
+      <td>ETL</td>
+    </tr>
+    <tr>
+      <td>FunMap</td>
+      <td>RML</td>
+      <td>FnO</td>
+      <td>separately, before schema transformation</td>
+      <td>Python</td>
+      <td>CLI</td>
+      <td>Apache-2.0</td>
+      <td>Function preprocessing, vertical scaling</td>
+      <td>Inherited from mapping rule processor</td>
+    </tr>
+    <tr>
+      <td>Chimera</td>
+      <td>RML</td>
+      <td>FnO</td>
+      <td>together, during schema transformation</td>
+      <td>Java</td>
+      <td>CLI</td>
+      <td>Apache-2.0</td>
+      <td>Mapping rules without joins optimizations, vertical scaling</td>
+      <td>Batch processing</td>
+    </tr>
+    <tr>
+      <td>SPARQL-Generate</td>
+      <td>SPARQL-Generate</td>
+      <td>SPARQL Functions</td>
+      <td>together, during schema transformation</td>
+      <td>Java</td>
+      <td>CLI, library, webapp, Sublime Text integration</td>
+      <td>Apache-2.0</td>
+      <td>None</td>
+      <td>ETL</td>
+    </tr>
+    <tr>
+      <td>SPARQL-Anything</td>
+      <td>Facade-X</td>
+      <td>SPARQL Functions</td>
+      <td>together, during schema transformation</td>
+      <td>Java</td>
+      <td>CLI, SPARQL endpoint</td>
+      <td>Apache-2.0</td>
+      <td>None</td>
+      <td>ETL</td>
+    </tr>
+    <tr>
+      <td>ShExML</td>
+      <td>ShExML</td>
+      <td>No</td>
+      <td>NA</td>
+      <td>Scala</td>
+      <td>CLI, library, webapp</td>
+      <td>MIT</td>
+      <td>None</td>
+      <td>ETL</td>
+    </tr>
+  </tbody>
+</table>

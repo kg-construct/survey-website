@@ -114,7 +114,7 @@ Morph-RDB is accessible as a CLI implementation
 and provides a Docker image (T9, T10).
 Morph-RDB is released on Github (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/oeg-upm/morph-rdb
+**Source code** : [https://github.com/oeg-upm/morph-rdb](https://github.com/oeg-upm/morph-rdb)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -146,7 +146,7 @@ RMLMapper is available as a CLI implementation, a Docker image,
 and a Java library (T9, T10).
 The RMLMapper is released under MIT license (T11) on Github (T12).
 
-**Source code** : https://github.com/RMLio/rmlmapper-java
+**Source code** : [https://github.com/RMLio/rmlmapper-java](https://github.com/RMLio/rmlmapper-java)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -170,7 +170,7 @@ The RDF is exported to a file specified as a CLI parameter (T3).
 Karma-Web supports JSON-LD and N3 as RDF output formats (T4).
 Karma-Web is publicly available (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/usc-isi-i2/Web-Karma
+**Source code** : [https://github.com/usc-isi-i2/Web-Karma](https://github.com/usc-isi-i2/Web-Karma)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -194,7 +194,7 @@ Morph-xR2RML supports N-Triples, Turtle, N3, RDF/XML,
 and JSON-LD as RDF output format.
 Morph-xR2RML is available on Github (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/frmichel/morph-xr2rml
+**Source code** : [https://github.com/frmichel/morph-xr2rml](https://github.com/frmichel/morph-xr2rml)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -218,7 +218,7 @@ TripleWave is written in NodeJS (T8) and
 it is available under Apache License 2.0 (T11)
 on Github (T12) as a CLI implementation (T9, T10).
 
-**Source code** : https://github.com/streamreasoning/TripleWave
+**Source code** : [https://github.com/streamreasoning/TripleWave](https://github.com/streamreasoning/TripleWave)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -241,7 +241,7 @@ but it can export RDF in Turtle or RDF/XML format (T4).
 GeoTriples is available as a CLI implementation or webapp (T9, T10)
 and it is released (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/LinkedEOData/GeoTriples
+**Source code** : [https://github.com/LinkedEOData/GeoTriples](https://github.com/LinkedEOData/GeoTriples)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -272,7 +272,7 @@ in its configuration file (T3, T4).
 RDF-Gen is available as compiled Java Jar CLI implementation (T9, T10, T12)
 under Creative Commons Attribution-NonCommercialNoDerivatives 4.0 International License (T11).
 
-**Source code** : https://github.com/datAcron-project/RDF-Gen
+**Source code** : [https://github.com/datAcron-project/RDF-Gen](https://github.com/datAcron-project/RDF-Gen)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -296,7 +296,7 @@ It is written in Scala (T8)
 and available (T12) under MIT license (T11)
 as a CLI implementation and Docker image (T9, T10).
 
-**Source code** : https://github.com/RMLio/RMLStreamer
+**Source code** : [https://github.com/RMLio/RMLStreamer](https://github.com/RMLio/RMLStreamer)
 <br>
 **Last accessed** : 23/03/2022
 <br>
@@ -312,7 +312,7 @@ MapSDI can preprocess files in CSV format (T1, T2),
 is written in Python (T8) and available (T12)
 as a CLI implementation (T9, T10) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/SDM-TIB/MapSDI
+**Source code** : [https://github.com/SDM-TIB/MapSDI](https://github.com/SDM-TIB/MapSDI)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -331,7 +331,7 @@ D-REPR can export its RDF to a file as Turtle or a custom JSON format (T3, T4).
 DREPR is available on Github (T12) under MIT license
 as a CLI implementation and webapp (T9, T10, T11).
 
-**Source code** : https://github.com/usc-isi-i2/d-repr/
+**Source code** : [https://github.com/usc-isi-i2/d-repr/](https://github.com/usc-isi-i2/d-repr/)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -356,7 +356,7 @@ RocketRML is released (T12) under
 Creative Commons AttributionNonCommercial-ShareAlike 4.0 International
 license (T11).
 
-**Source code** : https://github.com/semantifyit/RocketRML
+**Source code** : [https://github.com/semantifyit/RocketRML](https://github.com/semantifyit/RocketRML)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -383,7 +383,7 @@ SDM-RDFizer is available as a CLI implementation,
 Docker container or a Python module on the Python Package Index (T9, T10)
 and released (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/SDM-TIB/SDM-RDFizer
+**Source code** : [https://github.com/SDM-TIB/SDM-RDFizer](https://github.com/SDM-TIB/SDM-RDFizer)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -404,7 +404,7 @@ their characteristics (T1, T2, T3, T13b).
 FunMap is available as a CLI implementation (T9, T10)
 and released (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/SDM-TIB/FunMap
+**Source code** : [https://github.com/SDM-TIB/FunMap](https://github.com/SDM-TIB/FunMap)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -437,7 +437,7 @@ Chimera is released (T12) as a CLI implementation
 under Apache License 2.0 and the RMLMapper extension
 under MIT license (T9, T10, T11).
 
-**Source code** : https://github.com/cefriel/chimera
+**Source code** : [https://github.com/cefriel/chimera](https://github.com/SDM-TIB/FunMap)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -466,7 +466,7 @@ SPARQL-Generate is available as a CLI implementation, a Java library,
 a webapp, and inside the Sublime Text editor (T9, T10).
 It is released (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/sparql-generate/sparql-generate
+**Source code** : [https://github.com/sparql-generate/sparql-generate](https://github.com/sparql-generate/sparql-generate)
 <br>
 **Last accessed** : 10/11/2021
 
@@ -489,7 +489,7 @@ SPARQL-Anything is available as a CLI implementation
 or a SPARQL endpoint (T9, T10)
 and released (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/SPARQL-Anything/sparql.anything
+**Source code** : [https://github.com/SPARQL-Anything/sparql.anything](https://github.com/SPARQL-Anything/sparql.anything)
 <br>
 **Last accessed** : 23/03/2022
 <br>
@@ -511,7 +511,7 @@ ShExML does not provide any data transformations such as FnO (T6, T7).
 ShExML is available as a CLI implementation, Java library,
 and a webapp (T9, T10) and released on Github (T12) under the MIT license (T1) 
 
-**Source code** : https://github.com/herminiogg/ShExML
+**Source code** : [https://github.com/herminiogg/ShExML](https://github.com/herminiogg/ShExML)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -520,76 +520,37 @@ and a webapp (T9, T10) and released on Github (T12) under the MIT license (T1)
 
 ## Tables
 
-| T1: Datasource          | Karma-Web          | Morph-RDB          | Morph-xR2RML       | TripleWave         | GeoTriples         | RMLMapper          | RMLStreamer        | RDF-Gen            | MapSDI             | RocketRML          | SDM-RDFizer        | D-REPR             | FunMap             | Chimera            | SPARQL-Generate    | SPARGL-Anything    | ShExML             |
-|-------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| File                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| SQL RDB                 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |
-| NoSQL DB                |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |
-| Kafka stream            |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| WebSocket stream        |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
-| MQTT stream             |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
-| TCP stream              |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| SPARQL endpoint         |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |
-| Web API                 |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    | :heavy_check_mark: |
-| Apache Hadoop           |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| T2: Data format         |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| CSV format              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| JSON format             | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| XML format              | :heavy_check_mark: |                    | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| TSV format              | :heavy_check_mark: |                    | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    |                    |                    |                    | :heavy_check_mark: |                    |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |
-| ODS format              |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |
-| XLSX format             |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |
-| GeoJSON format          |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
-| KML format              |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| Shapefiles              |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| SQL query               | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |
-| NoSQL query             |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |
-| SPARQL query            |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |
-| CBOR format             |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
-| HDT format              |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
-| RDF format              |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |
-| plain text              |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |                    |
-| HTML format             |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |
-| Archives                |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |
-| EXIF encoded            |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |
-| NetCDF                  |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    | :heavy_check_mark: |                    |
-| T3: Output Data         |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| File                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Kafka stream            |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| WebSocket stream        |                    |                    |                    | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| MQTT stream             |                    |                    |                    | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| TCP stream              |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| SPARQL endpoint         |                    |                    |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |
-| Web API                 |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    |
-| T4: Output Data formats |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |                    |
-| N-Triples               |                    | :heavy_check_mark: | :heavy_check_mark: |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :start:            |                    | :heavy_check_mark: |                    | :start:            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| N-Quads                 |                    |                    |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :start:            | :heavy_check_mark: |                    |                    | :start:            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| Turtle                  |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :start:            |                    | :heavy_check_mark: | :heavy_check_mark: | :start:            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| N3                      | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                    |                    | :start:            |                    |                    |                    | :start:            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| RDF/XML                 |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    |                    | :start:            |                    |                    |                    | :start:            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| RDF/JSON                |                    |                    |                    |                    |                    |                    |                    |                    | :start:            |                    |                    |                    | :start:            |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| JSON-LD                 | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :start:            | :heavy_check_mark: |                    |                    | :start:            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| HDT                     |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    | :start:            |                    |                    |                    | :start:            | :heavy_check_mark: | :heavy_check_mark: |                    |                    |
-| TriX                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    | :start:            |                    |                    |                    | :start:            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| TriG                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                    | :start:            |                    |                    |                    | :start:            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| D-REPR JSON             |                    |                    |                    |                    |                    |                    |                    |                    | :start:            |                    |                    | :heavy_check_mark: | :start:            |                    |                    |                    |                    |
+<!-- T1 -->
+<div markdown="span" style="text-align: center;">
+_**Table 1:**
+T1: Datasource characteristic for each materialization tool._
+</div>
 
+{% include tables/materialization-table1.html %}
 
-| Materialization implementation | T5                             | T6                             | T7                                       | T8            | T9 and<br>T10                                  | T11          | T13a                                                                           | T13b                                  |
-| ------------------------------ | ------------------------------ | ------------------------------ | ---------------------------------------- | ------------- | ---------------------------------------------- | ------------ | ------------------------------------------------------------------------------ | ------------------------------------- |
-| Karma-Web                      | KR2RML                         | Python code snippets           | together, during schema transformation   | Python        | CLI                                            | Apache-2.0   | None                                                                           | ETL                                   |
-| Morph-RDB                      | R2RML                          | No                             | NA                                       | Scala         | CLI                                            | Apache-2.0   | Self-join and subquery elimination                                             | ETL                                   |
-| Morph-xR2RML                   | xR2RML                         | No                             | NA                                       | Scala         | CLI, SPARQL endpoint                           | Apache-2.0   | Inherited from Morph-RDB                                                       | ETL                                   |
-| TripleWave                     | R2RML                          | Hardcoded                      | together, pre-processing of input data   | NodeJS        | CLI                                            | Apache-2.0   | Vertical scaling                                                               | Streaming                             |
-| GeoTriples                     | RML with GeoTriples extensions | GeoSPARQL & stSPARQL functions | together, during schema transformation   | Java          | CLI, webapp                                    | Apache-2.0   | None                                                                           | ETL                                   |
-| RMLMapper                      | RML                            | FnO                            | together, during schema transformation   | Java          | CLI, library, Docker                           | MIT          | None                                                                           | ETL                                   |
-| RMLStreamer                    | RML                            | FnO                            | together, during schema transformation   | Scala         | CLI, Docker                                    | MIT          | Horizontal and vertical scaling                                                | Streaming                             |
-| MapSDI                         | RML                            | NA                             | NA                                       | Python        | CLI                                            | Apache-2.0   | Removal of unused and duplicate data, relational algebra                       | Inherited from mapping rule processor |
-| RocketRML                      | RML                            | FnO                            | together, during schema transformation   | NodeJS        | CLI, library, Docker, webapp                   | CC-BY-SA-4.0 | Multiple XML parsers                                                           | ETL                                   |
-| SDM-RDFizer                    | RML                            | No                             | NA                                       | Python        | CLI, library, Docker                           | Apache-2.0   | Removal of unused and duplicate data, relational algebra, memory optimizations | Batch processing                      |
-| D-REPR                         | D-REPR                         | Python code snippets           | together, pre-processing of input data   | Python & Rust | CLI, webapp, Docker                            | MIT          | Execution plans, core processing in native programming language                | ETL                                   |
-| FunMap                         | RML                            | FnO                            | separately, before schema transformation | Python        | CLI                                            | Apache-2.0   | Function preprocessing, vertical scaling                                       | Inherited from mapping rule processor |
-| Chimera                        | RML                            | FnO                            | together, during schema transformation   | Java          | CLI                                            | Apache-2.0   | Mapping rules without joins optimizations, vertical scaling                    | Batch processing                      |
-| SPARQL-Generate                | SPARQL-Generate                | SPARQL Functions               | together, during schema transformation   | Java          | CLI, library, webapp, Sublime Text integration | Apache-2.0   | None                                                                           | ETL                                   |
-| SPARQL-Anything                | Facade-X                       | SPARQL Functions               | together, during schema transformation   | Java          | CLI, SPARQL endpoint                           | Apache-2.0   | None                                                                           | ETL                                   |
-| ShExML                         | ShExML                         | No                             | NA                                       | Scala         | CLI, library, webapp                           | MIT          | None                                                                           | ETL                                   |
+<!-- T2 -->
+<div markdown="span" style="text-align: center;">
+_**Table 2:**
+T2: Data format characteristic for each materialization tool._
+</div>
+{% include tables/materialization-table2.html %}
+
+<!-- T3 -->
+<div markdown="span" style="text-align: center;">
+_**Table 3:**
+T3: Data Output characteristic for each materialization tool._
+</div>
+{% include tables/materialization-table3.html %}
+
+<!-- T4 -->
+<div markdown="span" style="text-align: center;">
+_**Table 4:**
+Characteristics T5 until T13a for each materialization tool.
+T5: Schema transformation language, T6: Data transformation language,
+T7: Applicability, T8: Programming language, T9: Integration, T10: Interface,
+T11: License, T12: Repository, T13a: Optimizations, T13b: Scaling._
+</div>
+{% include tables/materialization-table4.html %}
+
+<!-- DataTables setup -->
+{% include tables/materialization-datatables.html %}
