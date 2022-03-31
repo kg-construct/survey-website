@@ -106,7 +106,7 @@ Morph-RDB is accessible as a CLI implementation
 and provides a Docker image (T9, T10).
 MorphRDB's extension is released (T12) under the Apache License 2.0 (T11).
 
-**Source code** : https://github.com/oeg-upm/morph-rdb
+**Source code** : [https://github.com/oeg-upm/morph-rdb](https://github.com/oeg-upm/morph-rdb)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -147,7 +147,7 @@ and has experimental support for entailment with SWRL rules (T13a).
 Ontop is available as a CLI implementation and Docker image (T9, T10).
 Ontop is written in Java (T8) and released (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/ontop/ontop
+**Source code** : [https://github.com/ontop/ontop](https://github.com/ontop/ontop)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -189,7 +189,7 @@ and can be accessed through a webapp and an API (T9, T10).
 XGSN is available on Github (T12)
 under the GNU General Public License v3.0 (T11).
 
-**Source code** : https://github.com/LSIR/gsn
+**Source code** : [https://github.com/LSIR/gsn](https://github.com/LSIR/gsn)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -212,7 +212,7 @@ MorphRDB is accessible as a CLI implementation written in Scala (T8)
 and provides a Docker image (T9, T10).
 Morph-RDB is released (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/oeg-upm/morph-rdb
+**Source code** : [https://github.com/oeg-upm/morph-rdb](https://github.com/oeg-upm/morph-rdb)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -235,7 +235,7 @@ Morph-xR2RML provides a CLI implementation written in Scala (T8)
 or as a SPARQL endpoint (T9, T10)
 and is available (T12) under Apache License 2.0 (T11).
 
-**Source code** : https://github.com/frmichel/morph-xr2rml
+**Source code** : [https://github.com/frmichel/morph-xr2rml](https://github.com/frmichel/morph-xr2rml)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -256,7 +256,7 @@ SparqlMap-M is written in Java (T8)
 and available as a CLI implementation
 or SPARQL endpoint on Github without a license (T9, T10, T11, T12).
 
-**Source code** : https://github.com/tomatophantastico/sparqlmap
+**Source code** : [https://github.com/tomatophantastico/sparqlmap](https://github.com/tomatophantastico/sparqlmap)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -280,7 +280,7 @@ or federation (T13b).
 Morph-streams++ is written in Scala (T8) and released (T12)
 as a CLI implementation without license (T9, T10, T11).
 
-**Source code** : https://github.com/jpcik/morph-streams
+**Source code** : [https://github.com/jpcik/morph-streams](https://github.com/jpcik/morph-streams)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -308,7 +308,7 @@ Squerall is written in Java (T8)
 and available under Apache License 2.0 (T12)
 as a CLI implementation and via a GUI (T9, T10).
 
-**Source code** : https://github.com/EIS-Bonn/Squerall
+**Source code** : [https://github.com/EIS-Bonn/Squerall](https://github.com/EIS-Bonn/Squerall)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -330,7 +330,7 @@ but it does not support data transformations (T6).
 Ontario is written in Python (T8) available as CLI implementation
 under the General Public License 2.0 (T9, T10, T11 T12).
 
-**Source code** : https://github.com/SDM-TIB/Ontario
+**Source code** : [https://github.com/SDM-TIB/Ontario](https://github.com/SDM-TIB/Ontario)
 <br>
 **Last accessed** : 23/02/2022
 <br>
@@ -354,7 +354,7 @@ or SPARQL Federated Queries (T13b).
 ObiWan is available as CLI implementation and webapp
 on Gitlab under MIT license (T9, T10, T11 T12).
 
-**Source code** : https://gitlab.inria.fr/cedar/obi-wan
+**Source code** : [https://gitlab.inria.fr/cedar/obi-wan](https://gitlab.inria.fr/cedar/obi-wan)
 <br>
 **Last accessed** : 23/02/2022
 <br>
