@@ -362,66 +362,37 @@ on Gitlab under MIT license (T9, T10, T11 T12).
 
 ## Tables
 
-| Ontop               | R2RML or Ontop Mapping Language | No                     | NA                                     | Java   | CLI                   | Apache-2.0 | SQL & virtualization optimizations, aggregation on databases, ontological entailement | with Denodo, Dremio or Teiid |
-| ------------------- | ------------------------------- | ---------------------- | -------------------------------------- | ------ | --------------------- | ---------- | ------------------------------------------------------------------------------------- | ---------------------------- |
-| Morph-RDB           | R2RML                           | No                     | NA                                     | Scala  | CLI, Docker           | Apache-2.0 | SQL optimizations                                                                     | No                           |
-| Morph-xR2RML        | xR2RML                          | No                     | NA                                     | Scala  | CLI, SPARQL end-point | Apache-2.0 | Inherited from Morph-RDB                                                              | No                           |
-| SparqlMap-M         | R2RML                           | R2RML custom extension | together, during schema transformation | Java   | CLI, SPARQL end-point | No license | Query normalization & analysis, mapping binding, execute on database engine           | No                           |
-| Squerall            | RML                             | FnO                    | together, during schema transformation | Java   | CLI, GUI              | Apache-2.0 | Spark or Presto processing, aggregation on data sources                               | with Spark or Presto         |
-| Ontario             | RML                             | No                     | NA                                     | Python | CLI                   | GPL-2.0    | Star shape subqueries on data sources, locally joined                                 | SPARQL federation            |
-| Morph-RDB extension | S 2 O                           | No                     | NA                                     | Scala  | CLI, Docker           | Apache-2.0 | Inherited from Morph-RDB                                                              | with SNEEql                  |
-| XGSN                | SSN ontology                    | Hardcoded in wrapper   | together, pre-processing of input data | Java   | CLI, webapp, API      | GPL-3.0    | Access delegated to RDF stream processor                                              | No                           |
-| Obi-Wan             | custom GLAV mapping             | No                     | NA                                     | Java   | CLI, webapp           | MIT        | Ontology entailment                                                                   | with Tatooine                |
+<!-- T1 -->
+<div markdown="span" style="text-align: center;">
+_**Table 1:**
+T1: Datasource characteristic for each virtualization tool._
+</div>
 
-| Characteristic                             | Morph-streams++    | Ontop              | Morph-RDB          | Morph-xR2RML       | SparqlMap-M        | Squerall           | Ontario            | Morph-RDB extension | Obi-Wan            | XGSN               |
-|--------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|---------------------|--------------------|--------------------|
-| T1: Data source                            | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| File                                       |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  |                    |                    |
-| SQL RDB                                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: |                    |
-| NoSQL DB                                   |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                     | :heavy_check_mark: |                    |
-| OpenGIS                                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                    |                     |                    |                    |
-| Graph DB                                   |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                     |                    |                    |
-| Triple Store                               |                    |                    |                    |                    |                    |                    |                    |                     | :heavy_check_mark: |                    |
-| Kafka stream                               |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| WebSocket stream                           |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| MQTT stream                                |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                     |                    |                    |
-| TCP stream                                 |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| UDP stream                                 |                    |                    |                    |                    |                    |                    |                    |                     |                    | :heavy_check_mark: |
-| SPARQL endpoint                            |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| Web API                                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                    |                     |                    |                    |
-| Apache Hadoop                              |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                     |                    |                    |
-| Esper                                      | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| GSN                                        | :heavy_check_mark: |                    |                    |                    |                    |                    |                    |                     |                    | :heavy_check_mark: |
-| Apache Parquet                             |                    |                    |                    |                    |                    | :heavy_check_mark: |                    |                     |                    |                    |
-| Serial                                     |                    |                    |                    |                    |                    |                    |                    |                     |                    | :heavy_check_mark: |
-| CoAP                                       |                    |                    |                    |                    |                    |                    |                    |                     |                    | :heavy_check_mark: |
-| USB                                        |                    |                    |                    |                    |                    |                    |                    |                     |                    | :heavy_check_mark: |
-|                                            |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| T2: Data format                            |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| CSV format                                 |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  |                    | :heavy_check_mark: |
-| JSON format                                |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                     |                    |                    |
-| XML format                                 |                    |                    |                    | :heavy_check_mark: |                    |                    | :heavy_check_mark: |                     |                    |                    |
-| TSV format                                 |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                     |                    |                    |
-| ODS format                                 |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| XLSX format                                |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| GeoJSON format                             |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| KML format                                 |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| Shapefiles                                 |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| SQL query                                  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:  | :heavy_check_mark: | :heavy_check_mark: |
-| NoSQL query                                |                    |                    |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                     | :heavy_check_mark: |                    |
-| SPARQL query                               |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                     | :heavy_check_mark: |                    |
-| CBOR format                                |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| HDT format                                 |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| RDF format                                 |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| plain text                                 |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| HTML format                                |                    |                    |                    | :heavy_check_mark: |                    |                    |                    |                     |                    |                    |
-| Archives                                   |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| Neo4J graph                                |                    |                    |                    |                    |                    |                    | :heavy_check_mark: |                     |                    |                    |
-| EXIF encoded                               |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| RSS                                        |                    |                    |                    |                    |                    |                    |                    |                     |                    | :heavy_check_mark: |
-| ESRI Grid ASCII                            |                    |                    |                    |                    |                    |                    |                    |                     |                    | :heavy_check_mark: |
-| Images                                     |                    |                    |                    |                    |                    |                    |                    |                     |                    | :heavy_check_mark: |
-| T3: Output Data & T4: Output Data formats |                    |                    |                    |                    |                    |                    |                    |                     |                    |                    |
-| SPARQL Stream query result                 | :heavy_check_mark: |                    |                    |                    |                    |                    |                    | :heavy_check_mark:  |                    |                    |
-| SPARQL query result                        |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                     | :heavy_check_mark: | :heavy_check_mark: |
-| CQELS query result                         |                    |                    |                    |                    |                    |                    |                    |                     |                    | :heavy_check_mark: |
+{% include tables/virtualization-table1.html %}
+
+<!-- T2 -->
+<div markdown="span" style="text-align: center;">
+_**Table 2:**
+T2: Data format characteristic for each virtualization tool._
+</div>
+{% include tables/virtualization-table2.html %}
+
+<!-- T3 -->
+<div markdown="span" style="text-align: center;">
+_**Table 3:**
+T3 & T4: Output data & formats characteristic for each virtualization tool._
+</div>
+{% include tables/virtualization-table3.html %}
+
+<!-- T4 -->
+<div markdown="span" style="text-align: center;">
+_**Table 4:**
+Characteristics T5 until T13b for each virtualization tool.
+T5: Schema transformation language, T6: Data transformation language,
+T7: Applicability, T8: Programming language, T9: Integration, T10: Interface,
+T11: License, T12: Repository, T13a: Features, T13b: Federation._
+</div>
+{% include tables/virtualization-table4.html %}
+
+<!-- DataTables setup -->
+{% include tables/virtualization-datatables.html %}
