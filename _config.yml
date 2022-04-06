@@ -23,8 +23,8 @@ email: dylan.vanassche@ugent.be
 description: >- # this means to ignore newlines until "baseurl:"
   Systematic Literature Review of the latest 20 years research around
   knowledge graph construction from (semi)-structured heterogeneous data.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/assets/survey-website" # the subpath of your site, e.g. /blog
+url: "https://dylanvanassche.be" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: DylanVanAssche
 #github_username:  DylanVanAssche
 
@@ -34,6 +34,14 @@ plugins:
   - jekyll-feed
   - jemoji
 
+# Menu bar order
+header_pages:
+  - index.md
+  - survey-methodology.md
+  - schema-transformations.md
+  - data-transformations.md
+  - materialization-tools.md
+  - virtualization-tools.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
