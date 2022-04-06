@@ -4,37 +4,6 @@ title: Data Transformations
 permalink: /data-transformations/
 ---
 
-## Characteristics
-We derived a set of characteristics and divided them in 2 categories:
-
-1. Description
-2. Alignment
-
-### Description
-The way in which a data transformation is described such as function's body 
-or its parameters.
-
-- **F1: Declarativeness**
-If the data transformations are declaratively described,
-considering the function body, parameter values, and return values.
-- **F2: Shareability**
-If data transformations can be shared and re-used 
-through a common repository or library.
-- **F3: Custom data transformations**
-If custom data transformations can be described declaratively
-and be used with existing data transformations.
-
-### Alignment
-How the data transformations are aligned with mapping languages
-and if they can be used standalone or not.
-
-- **F4: Independence**
-The data transformation description depends 
-on certain mapping languages or implementations.
-- **F5: Integration with mapping languages**
-How mapping languages integrate the data transformations,
-interact with them and describe them in the mapping rules.
-
 ## Data transformations
 In this section, we analyzed 7 data transformation approaches
 on 5 different characteristics to provide an overview of these approaches.

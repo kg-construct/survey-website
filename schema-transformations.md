@@ -4,105 +4,12 @@ title: Schema Transformations
 permalink: /schema-transformations/
 ---
 
-## Characteristics
-
-We created a list of characteristics for schema transformations and divided
-them in 3 categories:
-
-1. Declarative transformation description
-2. Data processing and composition
-3. Coverage of the RDF(S) specification
-
-### Declarative transformation description
-Mapping languages declaratively describe in different ways
-how schema and data transformations are applied on input data.
-The following characteristics are considered:
-
-- **S1: Schema transformation**
-Schema transformations (re)model the input data,
-describe relations between data, and which vocabularies to use.
-For example, the schema transformation describes how
-a person's age should be modelled by relating the person's age
-from the input data, to the person, and use the appropriate vocabulary
-such as `foaf:age`.
-If the schema transformation
-is declaratively described by the mapping language.
-- **S2: Data transformation**
-Data transformations describe how to change data into a new representation.
-For example: the person's birth date is available
-in the input data, but the schema transformation requires the person's age.
-The data transformation describes how to transform the birth date
-into the age which can be used then by the schema transformation.
-If data can be transformed or conditions can be applied
-with the schema transformation.
-Some schema transformations leverages existing data transformations.
-- **S3: Export description**
-Export description describes to where and how the generated RDF is exported.
-If the serialization format e.g. RDF/XML or Turtle, and target e.g.,
-a file or a SPARQL of a generated RDF graph are described.
-- **S4: End-to-End**
-If a mapping language allows to describe the entire process declaratively
-from accessing and transforming the data until exporting the generated RDF,
-or relies on hard-coded parts to access, transform, or export RDF graphs.
-- **S5: Web standards integration**
-If a mapping language integrates with existing web standards
-by relating to existing W3C recommendations.
-
-### Data processing and composition
-Mapping languages describe access to and how to process
-input data in various ways. We consider the following characteristics:
-
-- **S6: Joins**
-If data joins are supported and
-are declaratively described in the schema transformation.
-- **S7: Intermediate representation**
-If a mapping language uses heterogeneous data directly or transforms
-it first into a homogeneous intermediate representation
-before applying the schema and data transformations.
-- **S8: Nester hierarchies**
-Nested data structures such as XML or JSON are not tabular
-like SQL databases or CSV, but hierarchical.
-If a mapping language can handle hierarchical structures
-and join these nested data structures or not.
-- **S9: Multi-paths**
-If multiple path expressions – such as JSON-Path or XPath –
-can be used together for accessing nested data encoded
-in heterogeneous formats, e.g., NoSQL databases
-allow mixing formats such as JSON inside the NoSQL database.
-If a mapping language can combine different path expressions or not.
-
-### Coverage of the RDF(S) specification
-We cover characteristics from the RDF 1.1 specification
-and the other vocabularies from the RDF Schema (RDFS) specification.
-These characteristics describe which parts
-are typically described by each mapping language.
-
-- **S10: RDF triples (subjects, predicates, and objects)**
-If a mapping language can describe how RDF subjects, predicates
-and objects should be generated.
-- **S11: IRIs**
-If a mapping language can describe
-how a valid IRI conform RFC 3987 should be generated.
-- **S12: Literals (including language tags and datatypes)**
-If a mapping language can specify how a Literal
-with optionally a language tag or datatype should be generated.
-- **S13: Blank Nodes**
-If a mapping language can describe the generation of RDF blank nodes.
-- **S14: Named graphs**
-If a mapping language can describe the generation 
-of an RDF Named Graph to make statements about a set of RDF triples.
-- **S15: Collections and containers**
-If a mapping language can describe the generation 
-of RDFS Collections and RDFS Containers.
-
-## Mapping languages
-
-### Dedicated mapping languages
+## Dedicated mapping languages
 Dedicated mapping languages are based upon dedicated
 mapping language specifications such as R2RML or a custom syntax
 such as YAML or JSON, for transforming heterogeneous data sources into RDF.
 
-#### RDF Mapping Language (2013)
+### RDF Mapping Language (2013)
 RDF Mapping Language ([RML](https://rml.io/specs/rml/))
 describes how RDF is generated from heterogeneous data 
 by extending the W3C recommendation R2RML (S5) to heterogeneous data sources.
@@ -127,7 +34,7 @@ data structures consisting of multiple data formats (S9),
 or collections and containers (S15),
 but an approach is proposed to overcome these limitations.
 
-#### xR2RML (2015)
+### xR2RML (2015)
 [xR2RML](https://www.i3s.unice.fr/~fmichel/xr2rml_specification_v5.html)
 extends R2RML (S1, S5, S10, S11, S12, S13, S14) and RML (S7)
 with additional data sources such as NoSQL databases,
@@ -146,7 +53,7 @@ to make it accessible in lower levels of the nested data structure.
 However, xR2RML does not describe where the generated RDF triples
 must be exported to (S3, S4), or describe data transformations (S2, S4).
 
-#### D2RML (2018)
+### D2RML (2018)
 D2RML extends R2RML with a Logical Source to define how the data source
 should be accessed and additionally support for transformations,
 conditions and custom IRI generation functions (S2).
@@ -163,7 +70,7 @@ heterogeneous data formats (S9),
 describe the generation of collections and containers (S15),
 or describe the output location (S3, S4).
 
-#### Dataset Representation (D-REPR, 2019)
+### Dataset Representation (D-REPR, 2019)
 Dataset Representation (D-REPR) (2019)
 is a mapping language based upon a custom YAML syntax (S5)
 for transforming heterogeneous data into RDF.
@@ -178,12 +85,12 @@ However, the output description, named graphs, RDF collections and containers,
 and RDF Literal language tags (S15)
 are not specified in the D-REPR mapping rules (S3, S4).
 
-### Repurposed mapping languages
+## Repurposed mapping languages
 Mapping languages repurposed syntax from existing specifications
 such as W3C's SPARQL or W3C's ShEx,
 for transforming heterogeneous data sources into RDF.
 
-#### XSPARQL (2009)
+### XSPARQL (2009)
 [XSPARQL](https://www.w3.org/Submission/xsparql-language-specification/)
 is a mapping language that combines XQuery, JSON-LD and R2RML
 with the W3C recommended SPARQL query language (S5)
@@ -199,7 +106,7 @@ Built-in and custom data transformations
 are applied using SPARQL Functions (S2).
 XSPARQL supports relational databases and XML, RDF, or JSON files.
 
-#### SPARQL-Generate (2017)
+### SPARQL-Generate (2017)
 SPARQL-Generate extends the W3C recommended SPARQL query language (S5)
 to transform heterogeneous data into RDF.
 SPARQL-Generate supports streaming and binary data sources
@@ -222,7 +129,7 @@ and blank nodes (S13), collections and containers (S15).
 However, SPARQL-Generate does not specify
 how the RDF must be exported (S3, S4) or how to handle multi-paths (S9).
 
-#### Shape Expressions Mapping Language (ShExML, 2020)
+### Shape Expressions Mapping Language (ShExML, 2020)
 Shape Expressions Mapping Language
 ([ShExML](http://shexml.herminiogarcia.com/spec/))
 is a mapping language based upon W3C's Shape Expressions (ShEx) (S5)
@@ -241,7 +148,7 @@ or how to handle multi-paths (S9).
 ShExML does not describe data transformations
 to apply on the heterogeneous data (S2, S4).
 
-#### Facade-X (2021)
+### Facade-X (2021)
 Facade-X overrides SPARQL's `SERVICE` operator (S5)
 to generate RDF from heterogeneous data sources.
 It supports JSON, CSV, HTML, XML, spreadsheets, binary data
@@ -254,7 +161,7 @@ and describes the schema transformation (S1).
 However, Facade-X does not specify how the RDF should be exported (S3, S4),
 or how to handle multi-paths (S9).
 
-### Table
+## Table
 
 <!-- Table -->
 <div markdown="span" style="text-align: center;">
