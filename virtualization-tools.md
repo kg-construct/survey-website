@@ -66,6 +66,12 @@ using the PerfectRef algorithm,
 but that was abandoned as mapping saturation proved more efficient.
 Ontop supports entailment for RDFS and OWL 2 QL,
 and has experimental support for entailment with SWRL rules (T13a).
+Ontop has been integrated in the Optique Platform (2013) 
+to access data such as relational databases, triple stores, 
+temporal databases, data streams, etc. 
+Optique leverages User Defined Functions as data transformation 
+for accessing external data sources, windowing, data mining. 
+However, Optique is not publicly available.
 Ontop is available as a CLI implementation and Docker image (T9, T10).
 Ontop is written in Java (T8) and released (T12) under Apache License 2.0 (T11).
 
@@ -74,20 +80,6 @@ Ontop is written in Java (T8) and released (T12) under Apache License 2.0 (T11).
 **Last accessed** : 23/02/2022
 <br>
 **Date last commit on default branch** : 21/03/2022
-
-### Optique (2013)
-Optique leverages R2RML mapping rules (T5)
-to access data such as relational databases, triple stores,
-temporal databases, data streams, etc.
-Optique uses STARQL as query language for streaming data
-which is translated into SQL queries (T1, T2).
-These SQL queries are executed on Optique's DSMS ExaStream.
-Optique's DSMS allows custom data transformations using
-User Defined Functions (T6) which are leveraged in Optique
-to access external data sources, windowing, and data mining.
-Optique is not publicly available,
-therefore we cannot evaluate characteristics
-T7, T9, T10, T11, T12, T13a, and T13b.
 
 ### XGSN v2.0.1 (2014)
 XGSN leverages Global Sensor Networks (GSN) middleware
