@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Transformations | Systematic Literature Review of mapping languages</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Data Transformations" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data." />
+<meta property="og:description" content="Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data." />
+<link rel="canonical" href="https://kg-construct.github.io/survey-website/data-transformations/" />
+<meta property="og:url" content="https://kg-construct.github.io/survey-website/data-transformations/" />
+<meta property="og:site_name" content="Systematic Literature Review of mapping languages" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Transformations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data.","headline":"Data Transformations","url":"https://kg-construct.github.io/survey-website/data-transformations/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/survey-website/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://kg-construct.github.io/survey-website/feed.xml" title="Systematic Literature Review of mapping languages" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/survey-website/">Systematic Literature Review of mapping languages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/survey-website/">About</a><a class="page-link" href="/survey-website/survey-methodology/">Survey Methodology</a><a class="page-link" href="/survey-website/characteristics/">Characteristics</a><a class="page-link" href="/survey-website/schema-transformations/">Schema Transformations</a><a class="page-link" href="/survey-website/data-transformations/">Data Transformations</a><a class="page-link" href="/survey-website/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Data Transformations</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="data-transformations">Data transformations</h2>
+<p>In this section, we analyzed 7 data transformation approaches
+on 5 different characteristics to provide an overview of these approaches.</p>
+
+<h3 id="sparql-functions-2013">SPARQL Functions (2013)</h3>
+<p>The W3C recommended SPARQL supports
+<a href="https://www.w3.org/TR/sparql11-query/#func-rdfTerms">functions</a>
+which are executed during query evaluation by the SPARQL engine.
+SPARQL specifies a set of built-in functions, conditions,
+and how custom functions can be used (F3).
+However, supported functions heavily depend on
+the underlying SPARQL engine executing the query (F4).
+SPARQL functions can be re-used among engines
+through SPARQL Federated Queries (F2).
+Function parameters and return values are not hard coded
+but binded using SPARQL BIND expressions (F1).
+SPARQL also provides conditions through <code class="language-plaintext highlighter-rouge">FILTER</code> and <code class="language-plaintext highlighter-rouge">IF</code> expressions
+to evaluate parts of the SPARQL query only when a certain condition is met.
+However, SPARQL functions cannot be used standalone because of
+their tight integration with the SPARQL query and engine (F4).
+SPARQL functions are integrated in SPARQL queries as a SPARQL operator
+and can be applied on any part of the schema transformation (F5).
+SPARQL functions are leveraged by
+<a href="https://github.com/sparql-generate/sparql-generate">SPARQL-Generate</a>,
+<a href="https://github.com/semantalytics/xsparql">XSPARQL</a>,
+and <a href="https://github.com/SPARQL-Anything/sparql.anything">Facade-X</a>
+to provide data transformations.</p>
+
+<h3 id="geotriples-2014">GeoTriples (2014)</h3>
+<p>GeoTriples extends RML with support for geographical data sources
+and transformations.
+GeoTriples uses <a href="https://www.opengis.net/doc/IS/geosparql/1.0">GeoSPARQL</a>
+and stSPARQL functions which are aligned with RML mapping rules
+through two extensions: <code class="language-plaintext highlighter-rouge">rrx:Function</code> and <code class="language-plaintext highlighter-rouge">rrx:ArgumentMap</code>.
+The parameters order in <code class="language-plaintext highlighter-rouge">rrx:ArgumentMap</code> matches the order of arguments
+of the function (<code class="language-plaintext highlighter-rouge">rdf:List</code>).
+Each function parameter is an <code class="language-plaintext highlighter-rouge">rr:TermMap</code> which allows GeoTriples
+to reference values as function parameters.
+The return value is used directly in the mapping rules
+and are not declarative described (F1, F5).
+GeoTriples supports a fixed set of GeoSPARQL and stSPARQL functions (F3)
+as data transformations, but these functions are not depending on GeoTriples.
+Therefore, GeoSPARQL and stSPARQL functions can be used
+with other GeoSPARQL and stSPARQL engines (F4).
+Currently, GeoSPARQL and stSPARQL functions are built-in into
+the GeoSPARQL query language, and not shared through a repository as FnO (F2).</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/LinkedEOData/GeoTriples">https://github.com/LinkedEOData/GeoTriples</a>
+<br />
+<strong>Last accessed</strong> : 10/11/2021</p>
+
+<h3 id="kr2rml-2015">KR2RML (2015)</h3>
+<p>KR2RML is based on R2RML with support for data transformations
+through custom functions and conditions written in Python (F3).
+The function’s body and parameter values are integrated
+in KR2RML mapping rules as a string (F5).
+Functions can use builtin Python modules or
+from <a href="https://pypi.org/">Python Package Index</a> (F2).
+Function parameters and return values are hardcoded
+in the KR2RML mapping rules without a declarative description (F1, F4).
+KR2RML functions are implemented in Karma-Web.</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/usc-isi-i2/Web-Karma">https://github.com/usc-isi-i2/Web-Karma</a>
+<br />
+<strong>Last accessed</strong> : 10/11/2021</p>
+
+<h3 id="function-ontology-fno-2016">Function Ontology (FnO, 2016)</h3>
+<p>The <a href="https://fno.io/spec/">Function Ontology</a> (FnO)
+is a semantic description of functions
+without depending on their implementation (F4).
+FnO describes each function’s parameters and
+return value to specify how the function should be used.
+Moreover, FnO also describes the problem the function solves
+to enable semantically re-use of functions.
+Existing functions and their implementations in various languages
+can be shared throughout the Function Hub (F2).
+Values which are passed to a function are not hardcoded but referenced (F1).
+Custom functions can be added by providing an FnO description
+and optionally one or multiple implementations (F3).
+FnO can be used standalone (F4),
+but is aligned with RML to apply data transformations.
+In RML, FnO descriptions can be added in the mapping rules
+on any part of the schema transformation
+through <a href="http://semweb.mmlab.be/ns/fnml#"><code class="language-plaintext highlighter-rouge">fnml:FunctionMap</code></a>
+since <code class="language-plaintext highlighter-rouge">fnml:FunctionMap</code> is compatible with an R2RML Term Map.
+Each Function Map refers to the function description
+to execute the function (<code class="language-plaintext highlighter-rouge">fno:executes</code>)
+and its parameters (example: <code class="language-plaintext highlighter-rouge">grel:inputString</code>) (F5).
+An FnO function can be used as a data transformation
+or as a condition in RML when performing the schema transformation.
+Several materialization implementations for generating knowledge graphs
+from heterogeneous using mapping languages incorporated support
+for FnO functions.</p>
+
+<p><strong>Specification</strong>: <a href="https://fno.io/spec/">https://fno.io/spec/</a>
+<br />
+<strong>Last accessed</strong>: 10/11/2021</p>
+
+<h3 id="funul-2016">FunUL (2016)</h3>
+<p>FunUL extends RML by incorporating functions and conditions
+inside the mapping rules.
+FunUL function’s body is a Literal,
+specified with the <code class="language-plaintext highlighter-rouge">rrf:functionBody</code> property.
+Its function’s name is described with the property <code class="language-plaintext highlighter-rouge">rrf:functionName</code>.
+Each function can be called through a <code class="language-plaintext highlighter-rouge">rrf:functionCall</code>
+which references to a function (<code class="language-plaintext highlighter-rouge">rrf:function</code>)
+and its parameters (<code class="language-plaintext highlighter-rouge">rrf:parameterBindings</code>) (F5).
+FunUL is based on R2RML-F and broadens R2RML-F’s scope
+from relational databases to heterogeneous data.
+FunUL is not stand-alone,
+as it must be used together with RML mapping rules (F4).
+FunUL’s functions are written in JavaScript as a literal
+in the RML mapping rules, but FunUL’s approach is not depending
+on a specific programming language as with KR2RML’s data transformations.
+FunUL’s functions parameters and return values are not hardcoded
+in the mapping rules for reusability (F1).
+However, FunUL reuses <code class="language-plaintext highlighter-rouge">rr:column</code>, <code class="language-plaintext highlighter-rouge">rml:reference</code>, and <code class="language-plaintext highlighter-rouge">rr:constant</code>
+from RML and R2RML for referencing values for function parameters,
+therefore no other mapping language can be used.
+FunUL’s function return values are directly used to generate RDF
+in a R2RML Predicate Object Map by the implementation
+executing the RML mapping rules.
+Built-in functions of a programming language can be used
+and custom functions can be defined as well inside the mapping rules (F3).
+Depending on the programming language and implementation,
+functions can be shared and reused from repositories,
+but there is no equivalent of FnO’s Function Hub (F2).
+FunUL is demonstrated in a forked version of the RML Processor.</p>
+
+<p><strong>Source code</strong>: <a href="https://github.com/CNGL-repo/RMLProcessor">https://github.com/CNGL-repo/RMLProcessor</a>
+<br />
+<strong>Last accessed</strong>: 10/11/2021</p>
+
+<h3 id="d2rml-2018">D2RML (2018)</h3>
+<p>D2RML extends R2RML for mapping heterogeneous data into RDF,
+but also with <code class="language-plaintext highlighter-rouge">dr:Function</code> to support data transformations and conditions.
+D2RML incorporates data transformations through <code class="language-plaintext highlighter-rouge">dr:Transformations</code>
+in its declarative description for generating RDF
+and are applied on the heterogeneous data retrieved
+through D2RML’s declarative data source description (Logical Source). 
+D2RML’s data transformations can only be described in a D2RML’s Triples Map
+to apply on the retrieved data,
+they cannot be used on D2RML’s abstracted intermediate format
+or on the generated RDF.
+D2RML conditions are located in R2RML’s Term Maps
+to generate an RDF triple based upon a certain condition (F5).
+D2RML uses <code class="language-plaintext highlighter-rouge">dr:Function</code> to refer to a function
+and <code class="language-plaintext highlighter-rouge">dr:ParameterBinding</code> to refer to function’s parameters,
+but the return value is not described (F1).
+D2RML data transformations and conditions cannot be used standalone
+because of tight integration with D2RML (F4).
+D2RML provides a set of custom IRI generation functions
+and allows the use of web services to apply custom transformations (F3).
+D2RML can not leverage a function repository to share
+and reuse existing functions (F2).
+D2RML data transformations and conditions are available
+as a <a href="https://apps.islab.ntua.gr/d2rml/">web service</a>.</p>
+
+<h3 id="d-repr-2019">D-REPR (2019)</h3>
+<p>D-REPR integrates data transformations for pre-processing data.
+Functions can be customized (F3),
+and are shareable as with KR2RML through Python Package Index (F2).
+Functions are written in Python with hardcoded parameters
+of each function (F1, F4), following a similar principle as KR2RML.
+These functions are only declaratively described for input data
+in a <code class="language-plaintext highlighter-rouge">[preprocessing]</code> YAML block which contains a list of functions.
+Each function has a function (<code class="language-plaintext highlighter-rouge">[type]</code>), its input parameters (<code class="language-plaintext highlighter-rouge">[input]</code>),
+expected return values and its body (<code class="language-plaintext highlighter-rouge">[code]</code>).
+Since these functions are described in the <code class="language-plaintext highlighter-rouge">[preprocessing]</code> block,
+they cannot be applied on the intermediate JSON tree format
+or on the generated RDF (F5).
+D-REPR’s data transformations are implemented in D-REPR.</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/usc-isi-i2/d-repr">https://github.com/usc-isi-i2/d-repr</a>
+<br />
+<strong>Last accessed</strong> : 10/11/2021</p>
+
+<h2 id="table">Table</h2>
+
+<!-- Table -->
+<div style="text-align: center;">
+<em><strong>Table 1:</strong>
+Characteristics F1 until F5 for data transformations.</em>
+</div>
+
+<table id="data-transformations-t1" class="display">
+  <thead>
+    <tr>
+      <th>Transformation</th>
+      <th>F1: Declarativeness</th>
+      <th>F2: Shareability</th>
+      <th>F3: Custom data transformations</th>
+      <th>F4: Independence</th>
+      <th>F5: Integration with mapping languages</th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr>
+      <td>SPARQL Functions</td>
+      <td>declarative described, referenced function &amp; parameters</td>
+      <td>Federated Queries</td>
+      <td>Yes</td>
+      <td>Depend on SPARQL</td>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <td>GeoTriples</td>
+      <td>declarative described, referenced function &amp; parameters</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Standalone</td>
+      <td>R2RML or RML</td>
+    </tr>
+    <tr>
+      <td>KR2RML</td>
+      <td>function body and parameters as hardcoded strings</td>
+      <td>Python Package Index</td>
+      <td>Yes</td>
+      <td>Depend on KR2RML</td>
+      <td>KR2RML-only</td>
+    </tr>
+    <tr>
+      <td>Function Ontology</td>
+      <td>declarative described, referenced function &amp; parameters</td>
+      <td>Function Hub</td>
+      <td>Yes</td>
+      <td>Standalone</td>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <td>FunUL</td>
+      <td>function body as string, referenced function &amp; parameters</td>
+      <td>Implementation dependent</td>
+      <td>Yes</td>
+      <td>Depend on RML</td>
+      <td>RML-only</td>
+    </tr>
+    <tr>
+      <td>D2RML</td>
+      <td>declarative described, referenced function &amp; parameters</td>
+      <td>No</td>
+      <td>Partially</td>
+      <td>Depend on D2RML</td>
+      <td>D2RML-only, only pre-processing input data</td>
+    </tr>
+    <tr>
+      <td>D-REPR</td>
+      <td>function body and parameters as string, hardcoded parameters</td>
+      <td>Python Package Index</td>
+      <td>Yes</td>
+      <td>Depend on D-REPR</td>
+      <td>D-REPR-only, only pre-processing input data</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- DataTables setup -->
+<!-- DataTables JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.datatables.net/autofill/2.3.9/js/dataTables.autoFill.min.js"></script>
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
+
+<link rel="stylesheet" href="https://cdn.datatables.net/autofill/2.3.9/css/autoFill.dataTables.min.css" />
+
+<!-- DataTables configuration -->
+<script>
+$(document).ready(function() {
+    var data_transformations_t1 = $('#data-transformations-t1').dataTable( {
+        scrollY: 400,
+        scrollX: 600,
+        scrollCollapse: true,
+        paging: false,
+        autoFill: true,
+        bFilter: false,
+        bSort: false,
+    } );
+} );
+</script>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/survey-website/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Systematic Literature Review of mapping languages</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Systematic Literature Review of mapping languages</li><li><a class="u-email" href="mailto:dylan.vanassche@ugent.be">dylan.vanassche@ugent.be</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.twitter.com/DylanVanAssche"><svg class="svg-icon"><use xlink:href="/survey-website/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DylanVanAssche</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
