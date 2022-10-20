@@ -11,9 +11,9 @@ Dylan Van Assche, Thomas Delva, Gerald Haesendonck, Pieter Heyvaert, Ben De Mees
 
 This paper is accepted at [Journal of Web Semantics](https://www.websemanticsjournal.org/):
 
-- DOI: https://doi.org/10.1016/j.websem.2022.100753
-- Pre-print article: https://dylanvanassche.be/assets/pdf/systematic-review-of-mapping-languages.pdf
-- Journal article: https://www.sciencedirect.com/science/article/abs/pii/S1570826822000373
+- Journal article: [https://www.sciencedirect.com/science/article/abs/pii/S1570826822000373](https://www.sciencedirect.com/science/article/abs/pii/S1570826822000373)
+- DOI: [10.1016/j.websem.2022.100753](https://doi.org/10.1016/j.websem.2022.100753)
+- Pre-print article: [systematic-review-of-mapping-languages.pdf](https://dylanvanassche.be/assets/pdf/systematic-review-of-mapping-languages.pdf)
 
 **Citation**
 ```
