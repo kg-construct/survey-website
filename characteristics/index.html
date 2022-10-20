@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Characteristics | Systematic Literature Review of mapping languages</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Characteristics" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data." />
+<meta property="og:description" content="Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data." />
+<link rel="canonical" href="https://kg-construct.github.io/survey-website/characteristics/" />
+<meta property="og:url" content="https://kg-construct.github.io/survey-website/characteristics/" />
+<meta property="og:site_name" content="Systematic Literature Review of mapping languages" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Characteristics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data.","headline":"Characteristics","url":"https://kg-construct.github.io/survey-website/characteristics/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/survey-website/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://kg-construct.github.io/survey-website/feed.xml" title="Systematic Literature Review of mapping languages" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/survey-website/">Systematic Literature Review of mapping languages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/survey-website/">About</a><a class="page-link" href="/survey-website/survey-methodology/">Survey Methodology</a><a class="page-link" href="/survey-website/characteristics/">Characteristics</a><a class="page-link" href="/survey-website/schema-transformations/">Schema Transformations</a><a class="page-link" href="/survey-website/data-transformations/">Data Transformations</a><a class="page-link" href="/survey-website/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Characteristics</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="characteristics">Characteristics</h2>
+
+<h3 id="schema-transformations">Schema transformations</h3>
+
+<p>We created a list of characteristics for schema transformations and divided
+them in 3 categories:</p>
+
+<ol>
+  <li>Declarative transformation description</li>
+  <li>Data processing and composition</li>
+  <li>Coverage of the RDF(S) specification</li>
+</ol>
+
+<h4 id="declarative-transformation-description">Declarative transformation description</h4>
+<p>Mapping languages declaratively describe in different ways
+how schema and data transformations are applied on input data.
+The following characteristics are considered:</p>
+
+<ul>
+  <li><strong>S1: Schema transformation</strong>
+Schema transformations (re)model the input data,
+describe relations between data, and which vocabularies to use.
+For example, the schema transformation describes how
+a person’s age should be modelled by relating the person’s age
+from the input data, to the person, and use the appropriate vocabulary
+such as <code class="language-plaintext highlighter-rouge">foaf:age</code>.
+If the schema transformation
+is declaratively described by the mapping language.</li>
+  <li><strong>S2: Data transformation</strong>
+Data transformations describe how to change data into a new representation.
+For example: the person’s birth date is available
+in the input data, but the schema transformation requires the person’s age.
+The data transformation describes how to transform the birth date
+into the age which can be used then by the schema transformation.
+If data can be transformed or conditions can be applied
+with the schema transformation.
+Some schema transformations leverages existing data transformations.</li>
+  <li><strong>S3: Export description</strong>
+Export description describes to where and how the generated RDF is exported.
+If the serialization format e.g. RDF/XML or Turtle, and target e.g.,
+a file or a SPARQL of a generated RDF graph are described.</li>
+  <li><strong>S4: End-to-End</strong>
+If a mapping language allows to describe the entire process declaratively
+from accessing and transforming the data until exporting the generated RDF,
+or relies on hard-coded parts to access, transform, or export RDF graphs.</li>
+  <li><strong>S5: Web standards integration</strong>
+If a mapping language integrates with existing web standards
+by relating to existing W3C recommendations.</li>
+</ul>
+
+<h4 id="data-processing-and-composition">Data processing and composition</h4>
+<p>Mapping languages describe access to and how to process
+input data in various ways. We consider the following characteristics:</p>
+
+<ul>
+  <li><strong>S6: Joins</strong>
+If data joins are supported and
+are declaratively described in the schema transformation.</li>
+  <li><strong>S7: Intermediate representation</strong>
+If a mapping language uses heterogeneous data directly or transforms
+it first into a homogeneous intermediate representation
+before applying the schema and data transformations.</li>
+  <li><strong>S8: Nester hierarchies</strong>
+Nested data structures such as XML or JSON are not tabular
+like SQL databases or CSV, but hierarchical.
+If a mapping language can handle hierarchical structures
+and join these nested data structures or not.</li>
+  <li><strong>S9: Multi-paths</strong>
+If multiple path expressions – such as JSON-Path or XPath –
+can be used together for accessing nested data encoded
+in heterogeneous formats, e.g., NoSQL databases
+allow mixing formats such as JSON inside the NoSQL database.
+If a mapping language can combine different path expressions or not.</li>
+</ul>
+
+<h4 id="coverage-of-the-rdfs-specification">Coverage of the RDF(S) specification</h4>
+<p>We cover characteristics from the RDF 1.1 specification
+and the other vocabularies from the RDF Schema (RDFS) specification.
+These characteristics describe which parts
+are typically described by each mapping language.</p>
+
+<ul>
+  <li><strong>S10: RDF triples (subjects, predicates, and objects)</strong>
+If a mapping language can describe how RDF subjects, predicates
+and objects should be generated.</li>
+  <li><strong>S11: IRIs</strong>
+If a mapping language can describe
+how a valid IRI conform RFC 3987 should be generated.</li>
+  <li><strong>S12: Literals (including language tags and datatypes)</strong>
+If a mapping language can specify how a Literal
+with optionally a language tag or datatype should be generated.</li>
+  <li><strong>S13: Blank Nodes</strong>
+If a mapping language can describe the generation of RDF blank nodes.</li>
+  <li><strong>S14: Named graphs</strong>
+If a mapping language can describe the generation 
+of an RDF Named Graph to make statements about a set of RDF triples.</li>
+  <li><strong>S15: Collections and containers</strong>
+If a mapping language can describe the generation 
+of RDFS Collections and RDFS Containers.</li>
+</ul>
+
+<h3 id="data-transformations">Data transformations</h3>
+<p>We derived a set of characteristics and divided them in 2 categories:</p>
+
+<ol>
+  <li>Description</li>
+  <li>Alignment</li>
+</ol>
+
+<h4 id="description">Description</h4>
+<p>The way in which a data transformation is described such as function’s body 
+or its parameters.</p>
+
+<ul>
+  <li><strong>F1: Declarativeness</strong>
+If the data transformations are declaratively described,
+considering the function body, parameter values, and return values.</li>
+  <li><strong>F2: Shareability</strong>
+If data transformations can be shared and re-used 
+through a common repository or library.</li>
+  <li><strong>F3: Custom data transformations</strong>
+If custom data transformations can be described declaratively
+and be used with existing data transformations.</li>
+</ul>
+
+<h4 id="alignment">Alignment</h4>
+<p>How the data transformations are aligned with mapping languages
+and if they can be used standalone or not.</p>
+
+<ul>
+  <li><strong>F4: Independence</strong>
+The data transformation description depends 
+on certain mapping languages or implementations.</li>
+  <li><strong>F5: Integration with mapping languages</strong>
+How mapping languages integrate the data transformations,
+interact with them and describe them in the mapping rules.</li>
+</ul>
+
+<h3 id="tools">Tools</h3>
+
+<p>We compiled a list of common characteristics
+which differ between implementations.
+We divided them in 4 categories:</p>
+
+<ol>
+  <li>Input/Output</li>
+  <li>Data transformation</li>
+  <li>Implementation</li>
+  <li>Materialization-specific characteristics</li>
+</ol>
+
+<p>The first 3 categories are shared with the virtualization tools.</p>
+
+<h3 id="inputoutput">Input/Output</h3>
+
+<p>These characteristics are related to the input data,
+output data and which schema and data transformations
+are used by each implementation:</p>
+
+<ul>
+  <li><strong>T1: Input Data</strong>:
+Which data sources are accessible and data can be retrieved from.</li>
+  <li><strong>T2: Input Data formats</strong>:
+Which data formats are supported for the input data.</li>
+  <li><strong>T3: Output Data</strong>:
+How the generated knowledge graphs are exported
+to a specific location in a certain format.</li>
+  <li><strong>T4: Output Data formats</strong>:
+Which data formats are supported for the output data.</li>
+  <li><strong>T5: Schema transformation language</strong>: 
+Which mapping language(s) are supported by an implementation.</li>
+</ul>
+
+<h3 id="data-transformation">Data transformation</h3>
+
+<p>Each implementation may have support for data transformations
+besides schema transformations.
+The following characteristics are used to validate how
+and which data transformations are supported by a given implementation:</p>
+
+<ul>
+  <li><strong>T6: Data transformation language</strong>:
+Which data transformation language(s) are supported by an implementation.</li>
+  <li><strong>T7: Applicability</strong>:
+Where during the execution process does 
+the implementation apply data transformations to the data:
+(i) pre-processing, during the input data retrieval,
+(ii) during schema transformation into RDF,
+(iii) post-processing, after the schema transformation?</li>
+</ul>
+
+<h3 id="implementation">Implementation</h3>
+
+<p>Each implementation has specific characteristics
+regarding the implementation itself such as
+the programming language or how it integrates with other implementations.</p>
+
+<ul>
+  <li><strong>T8: Programming language</strong>: 
+The programming language of the implementation.</li>
+  <li><strong>T9: Integration</strong>:
+How a implementation can be integrated with other implementations.</li>
+  <li><strong>T10: Interface</strong>:
+How a implementation can be used.</li>
+  <li><strong>T11: License</strong>:
+The license of an implementation.</li>
+  <li><strong>T12: Repository</strong>:
+The location of the implementation’s code repository, if available.</li>
+</ul>
+
+<h3 id="materialization-specific-characteristics">Materialization-specific characteristics</h3>
+<p>We studied each materialization implementation and created
+a list of characteristics specific for materialization which
+greatly differ between these implementations:</p>
+
+<ul>
+  <li><strong>T13a: Optimizations</strong>
+Which optimizations are applied to the materialization process?</li>
+  <li><strong>T13b: Scaling</strong>
+Which approaches are used to scale the materialization process?</li>
+</ul>
+
+<h3 id="virtualization-specific-characteristics">Virtualization-specific characteristics</h3>
+
+<p>We studied each virtualization implementation
+and created a list of characteristics which are specific
+for virtualization tools:</p>
+
+<ul>
+  <li><strong>T13a: Features</strong>
+Each implementation has its own set 
+of features regarding virtual access to its heterogeneous data sources.
+Which features are applied to the virtualization process?</li>
+  <li><strong>T13b: Federation</strong>
+Virtualization systems access multiple data sources typically using federation.
+Does the implementation support federation or not?</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/survey-website/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Systematic Literature Review of mapping languages</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Systematic Literature Review of mapping languages</li><li><a class="u-email" href="mailto:dylan.vanassche@ugent.be">dylan.vanassche@ugent.be</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.twitter.com/DylanVanAssche"><svg class="svg-icon"><use xlink:href="/survey-website/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DylanVanAssche</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

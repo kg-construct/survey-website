@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Survey Methodology | Systematic Literature Review of mapping languages</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Survey Methodology" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data." />
+<meta property="og:description" content="Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data." />
+<link rel="canonical" href="https://kg-construct.github.io/survey-website/survey-methodology/" />
+<meta property="og:url" content="https://kg-construct.github.io/survey-website/survey-methodology/" />
+<meta property="og:site_name" content="Systematic Literature Review of mapping languages" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Survey Methodology" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data.","headline":"Survey Methodology","url":"https://kg-construct.github.io/survey-website/survey-methodology/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/survey-website/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://kg-construct.github.io/survey-website/feed.xml" title="Systematic Literature Review of mapping languages" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/survey-website/">Systematic Literature Review of mapping languages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/survey-website/">About</a><a class="page-link" href="/survey-website/survey-methodology/">Survey Methodology</a><a class="page-link" href="/survey-website/characteristics/">Characteristics</a><a class="page-link" href="/survey-website/schema-transformations/">Schema Transformations</a><a class="page-link" href="/survey-website/data-transformations/">Data Transformations</a><a class="page-link" href="/survey-website/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Survey Methodology</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="criteria">Criteria</h2>
+
+<p>We consider the following inclusion and exclusion criteria 
+during our systematic literature review to include or exclude an article:</p>
+
+<h3 id="inclusion-criteria">Inclusion criteria</h3>
+
+<ul>
+  <li>Articles published from the first published recommendation of RDF in 1999
+until 2021.</li>
+  <li>Articles written in English.</li>
+  <li>Articles describing approaches and implementations related to:
+    <ul>
+      <li>Generating knowledge graphs from heterogeneous data sources.</li>
+      <li>Describing implementations and optimizations of existing knowledge 
+graph generation approaches.</li>
+      <li>Specifying schema or data transformation for heterogeneous data.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="exclusion-criteria">Exclusion criteria</h3>
+
+<ul>
+  <li>Articles which are not published or peer-reviewed.</li>
+  <li>Articles written in another language than English.</li>
+  <li>Technical reports, demo papers, posters, PhD consortium papers, and 
+presentations.</li>
+  <li>Commercialized approaches and implementations.</li>
+</ul>
+
+<p>This systematic literature review was performed independently by 3 authors.</p>
+
+<h2 id="step-1-collecting-articles">Step 1: Collecting articles</h2>
+
+<p>We created a list of terms by breaking down our research sub-questions into 
+individual facets and their alternative spelling, synonyms and abbreviations. 
+These terms were combined together with Boolean <code class="language-plaintext highlighter-rouge">AND</code> and <code class="language-plaintext highlighter-rouge">OR</code> operators
+and used by each reviewer when searching for relevant articles.
+We avoided to use these terms individually because they were too broad
+which resulted in an enormous number of results.
+The following terms and combinations were considered in this systematic review:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">("knowledge graph" OR "knowledge graphs") AND ("definition" OR "definitions")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("RDF" OR "Resource Description Framework") AND "heterogeneous data"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("transformation" OR "transformations") AND "heterogeneous data"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("answer" OR "answers" OR "answering") AND ("query" OR "queries")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("Resource Description Framework" OR "RDF") AND ("stream" OR "streams" OR "streaming")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("Linked Data" OR "Linked Open Data" OR "LOD" OR "knowledge graph" OR "knowledge graphs") AND "generation"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("Linked Data" OR "Linked Open Data" OR "LOD" OR "knowledge graph" OR "knowledge graphs") AND "construction"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">"SPARQL" AND ("generation" OR "construction")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("mapping language" OR "mapping languages") AND ("RDB" OR "relational database" OR "relational databases")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("mapping language" OR "mapping languages") AND "heterogeneous data"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("mapping language" OR "mapping languages") AND ("function" OR "functions")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("mapping language" OR "mapping languages") AND ("transformation" OR "transformations")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("mapping language" OR "mapping languages") AND ("RDF" OR "Resource Description Framework")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("mapping language" OR "mapping languages") AND ("knowledge graph" OR "knowledge graphs" OR "Linked Data" OR "Linked Open Data" OR "LOD")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("mapping language" OR "mapping languages") AND ("knowledge graph" OR "knowledge graphs" OR "Linked Data" OR "Linked Open Data" OR "LOD") AND ("generation" OR "construction")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("mapping language" OR "mapping languages") AND "SPARQL"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("Linked Data" OR "Linked Open Data" OR "LOD") AND ("mapping language" OR "mapping languages")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("mapping language" OR "mapping languages") AND "R2RML"</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("generation" OR "construction") AND "R2RML" AND ("knowledge graph" OR "knowledge graphs" OR "Linked Data" OR "Linked Open Data" OR "LOD")</code></li>
+  <li><code class="language-plaintext highlighter-rouge">("stream" OR "streams" OR "streaming") AND ("RDF" OR "Resource Description Framework") AND "SPARQL"</code></li>
+</ul>
+
+<h3 id="collections">Collections</h3>
+
+<ul>
+  <li>Digital Libraries:</li>
+  <li>Journals:</li>
+  <li>Conferences:</li>
+  <li>Workshops:</li>
+</ul>
+
+<h2 id="step-2-review-titles--abstracts">Step 2: Review titles &amp; abstracts</h2>
+<p>We searched for these terms in the article’s title and abstract 
+to avoid a high number of irrelevant articles in comparison 
+to searching in the article’s full text.
+An article is selected when at least one of the combined terms has been found
+in the title or abstract of an article.
+We searched for our terms in 42 sources ranging from journals, conferences and 
+digital libraries.
+We retrieved 1884 articles which are potentially relevant for this survey paper. 
+After removing duplicates, 1729 articles were added to the review list.</p>
+
+<p>The following sources were used to search for relevant articles
+for this survey paper:</p>
+
+<h3 id="journals">Journals</h3>
+
+<ul>
+  <li>Semantic Web Journal (SWJ)</li>
+  <li>Journal of Web Semantics (JoWS)</li>
+  <li>International Journal of Web Information Systems (IJWIS)</li>
+  <li>Future Generation Computer Systems (FGCS)</li>
+  <li>Journal on Data Semantics (JDS)</li>
+  <li>International Journal on Semantic Web and Information Systems (IJSWIS)</li>
+  <li>PeerJ Computer Science</li>
+  <li>Information</li>
+  <li>International Journal on Digital Libraries (IJDL)</li>
+  <li>International Journal of Applied Mathematics and Computer Science (IJAMCS)</li>
+  <li>International Journal of Software Engineering and Knowledge Engineering (IJSEKE)</li>
+</ul>
+
+<h3 id="conferences">Conferences</h3>
+
+<ul>
+  <li>International Semantic Web Conference (ISWC)</li>
+  <li>European Semantic Web Conference (ESWC)</li>
+  <li>International Conference on Semantic Systems (SEMANTiCS/I-SEMANTICS)</li>
+  <li>International Conference on Semantic Computing (ICSC)</li>
+  <li>International Conference on Knowledge Engineering and Knowledge Management (EKAW)</li>
+  <li>International Conference on Knowledge Capture (K-Cap)</li>
+  <li>Conference on Information and Knowledge Management (CIKM)</li>
+  <li>Knowledge Graph and Semantic Web Conference (KGSWC)</li>
+  <li>The Web Conference (WWW)</li>
+  <li>Ontologies, Databases and Applications of Semantics (ODBASE)</li>
+  <li>Language, Data and Knowledge (LDK)</li>
+  <li>International Conference on Web Intelligence (WI-IAT)</li>
+  <li>International Conference on Web Information Systems and Technologies (WEBIST)</li>
+  <li>International Conference on Web Intelligence, Mining and Semantics (WIMS)</li>
+  <li>International Conference on Web Engineering (ICWE)</li>
+</ul>
+
+<h3 id="workshops">Workshops</h3>
+
+<ul>
+  <li>Knowledge Graph Construction Workshop (KGCW)</li>
+  <li>Knowledge Graph Building Workshop (KGB)</li>
+  <li>Consuming Linked Data Workshop (COLD)</li>
+  <li>Large Scale RDF Analytics Workshop (LASCAR)</li>
+  <li>Semantic Big Data Workshop (SBD)</li>
+  <li>International Semantic Sensor Networks Workshop (SSN)</li>
+  <li>Workshop on Linked Data on the Web (LDOW)</li>
+</ul>
+
+<h3 id="digital-libraries">Digital Libraries</h3>
+
+<ul>
+  <li>IEEE Explore</li>
+  <li>Springer Link</li>
+  <li>Science Direct</li>
+  <li>ACM Digital Library</li>
+  <li>Google Scholar</li>
+</ul>
+
+<h2 id="step-3-applying-additional-search-strategies">Step 3: Applying additional search strategies</h2>
+
+<p>We also enriched our review list by following additional search strategies 
+to include more relevant articles:</p>
+
+<ol>
+  <li>reviewing references of potentially relevant articles</li>
+  <li>adding manually relevant articles.</li>
+</ol>
+
+<p>We searched for potentially relevant articles through the references 
+of other relevant articles. 
+This way, we discovered 3 more potentially relevant articles. 
+We also manually added 3 more articles which we found relevant for this survey.
+This result in 1735 articles in total.
+We indicated these 6 articles in the tables below with a ‘*’.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author(s)</th>
+      <th>Scope</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A middleware framework for scalable management of linked streams*</td>
+      <td>Le-Phuoc D. et al.</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>Exploiting Declarative Mapping Rules for Generating GraphQL Servers with Morph-GraphQL*</td>
+      <td>Chaves-Fraga D. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Implementation-independent function reuse*</td>
+      <td>De Meester B. et al.</td>
+      <td>DT</td>
+    </tr>
+    <tr>
+      <td>LDScript: A Linked Data Script Language*</td>
+      <td>Corby O. et al.</td>
+      <td>DT</td>
+    </tr>
+    <tr>
+      <td>Querying the Web of Data with XSPARQL 1.1*</td>
+      <td>Dell’Aglio D. et al.</td>
+      <td>ML, DT</td>
+    </tr>
+    <tr>
+      <td>Turning Transport Data to Comply with EU Standards While Enabling a Multimodal Transport Knowledge Graph*</td>
+      <td>Scrocca M. et al.</td>
+      <td>MT</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="step-4-reviewing-potential-articles-for-inclusion">Step 4: Reviewing potential articles for inclusion</h2>
+
+<p>We manually reviewed the retrieved potentially relevant articles
+among reviewers.
+The reviewers verified the article’s relevance
+for this systematic literature review and
+applied our inclusion and exclusion criteria. 
+This resulted in 52 relevant articles for this survey paper.
+18 articles introduce or extend a mapping language (ML) for 
+transforming heterogeneous data into a knowledge graph.
+16 articles introduce data transformations (DT) or align them
+with a mapping language for heterogeneous data.
+21 articles describe a materialization tool (MT),
+and 18 articles a virtualization tool (VT)
+for transforming heterogeneous data into a knowledge graph.
+12 articles were submitted to workshops, 27 to conferences, and 13 to journals.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author(s)</th>
+      <th>Scope</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A Generic Mapping-based Query Translation from SPARQL to Various Target Database Query Languages</td>
+      <td>Michel F. et al.</td>
+      <td>ML, DT, VT</td>
+    </tr>
+    <tr>
+      <td>A middleware framework for scalable management of linked streams*</td>
+      <td>Le-Phuoc D. et al.</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>A SPARQL Extension for Generating RDF from Heterogeneous Formats</td>
+      <td>Lefrançois M. et al.</td>
+      <td>ML, DT, MT</td>
+    </tr>
+    <tr>
+      <td>DAFO: An Ontological Database System with Faceted Queries</td>
+      <td>Pankowski T. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Declarative Data Transformations for Linked Data Generation: The Case of DBpedia</td>
+      <td>De Meester B. et al.</td>
+      <td>DT, VT</td>
+    </tr>
+    <tr>
+      <td>Detailed Provenance Capture of Data Processing</td>
+      <td>De Meester B. et al.</td>
+      <td>ML</td>
+    </tr>
+    <tr>
+      <td>D2RML: Integrating Heterogeneous Data and Web Services into Custom RDF Graphs</td>
+      <td>Chortaras A. et al.</td>
+      <td>ML, MT</td>
+    </tr>
+    <tr>
+      <td>D-REPR: A Language for Describing and Mapping Diversely-Structured Data Sources to RDF</td>
+      <td>Vu B. et al.</td>
+      <td>ML, MT, DT</td>
+    </tr>
+    <tr>
+      <td>Enabling Ontology-Based Access to Streaming Data Sources</td>
+      <td>Calbimonte J. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Enabling RDF Stream Processing for Sensor Data Management in the Environmental Domain</td>
+      <td>Llave A. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Executing SPARQL queries over Mapped Document Store with SparqlMap-M</td>
+      <td>Unbehauen J. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Exploiting Declarative Mapping Rules for Generating GraphQL Servers with Morph-GraphQL*</td>
+      <td>Chaves-Fraga D. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Flexible RDF Generation from RDF and Heterogeneous Data Sources with SPARQL-Generate</td>
+      <td>Lefrançois M. et al.</td>
+      <td>ML, DT, MT</td>
+    </tr>
+    <tr>
+      <td>Formalisation and Experiences of R2RML-Based SPARQL to SQL Query Translation Using Morph</td>
+      <td>Priyatna F. et al.</td>
+      <td>DT, MT</td>
+    </tr>
+    <tr>
+      <td>FunMap: Efficient Execution of Functional Mappings for Knowledge Graph Creation</td>
+      <td>Jozashoori, S. et al.</td>
+      <td>DT</td>
+    </tr>
+    <tr>
+      <td>FunUL: A Method to Incorporate Functions into Uplift Mapping Languages</td>
+      <td>Crotti Junior A. et al.</td>
+      <td>DT</td>
+    </tr>
+    <tr>
+      <td>GeoTriples: a Tool for Publishing Geospatial Data as RDF Graphs Using R2RML Mappings</td>
+      <td>Kyzirakos K. et al.</td>
+      <td>ML, MT</td>
+    </tr>
+    <tr>
+      <td>GeoTriples: Transforming geospatial data into RDF graphs using R2RML and RML mappings</td>
+      <td>Kyzirakos K. et al.</td>
+      <td>ML, MT</td>
+    </tr>
+    <tr>
+      <td>Implementation-independent function reuse*</td>
+      <td>De Meester B. et al.</td>
+      <td>DT</td>
+    </tr>
+    <tr>
+      <td>KR2RML: An Alternative Interpretation of R2RML for Heterogeneous Sources</td>
+      <td>Slepicka J. et al.</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>LDScript: A Linked Data Script Language*</td>
+      <td>Corby O. et al.</td>
+      <td>DT</td>
+    </tr>
+    <tr>
+      <td>Leveraging Web of Things W3C Recommendations for Knowledge Graphs Generation</td>
+      <td>Van Assche D. et al.</td>
+      <td>ML</td>
+    </tr>
+    <tr>
+      <td>Linked Data Integration Framework</td>
+      <td>Schultz A. et al.</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>Machine-Interpretable Dataset and Service Descriptions for Heterogeneous Data Access and Retrieval</td>
+      <td>Dimou A. et al.</td>
+      <td>ML</td>
+    </tr>
+    <tr>
+      <td>MapSDI: A Scaled-Up Semantic Data Integration Framework for Knowledge Graph Creation</td>
+      <td>Jozashoori, S. et al.</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>Mapping between RDF and XML with XSPARQL</td>
+      <td>Bischof S. et al.</td>
+      <td>ML, DT</td>
+    </tr>
+    <tr>
+      <td>Mapping Hierarchical Sources into RDF Using the RML Mapping Language</td>
+      <td>Dimou A. et al.</td>
+      <td>ML, MT</td>
+    </tr>
+    <tr>
+      <td>Obi-Wan: Ontology-Based RDF Integration of Heterogeneous Data</td>
+      <td>Buron M. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Ontario: Federated Query Processing against a Semantic Data Lake</td>
+      <td>M. Endris K. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Ontology–based access to temporal data with Ontop: A framework proposal</td>
+      <td>Güzel Kalayci E. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Ontology-Based Data Access: Ontop of Databases</td>
+      <td>Rodríguez-Muro M. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Ontop: Answering SPARQL Queries over Relational Databases</td>
+      <td>Calvanese D. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Ontop-spatial: Ontop of geospatial databases</td>
+      <td>Bereta K. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>On the semantics of heterogeneous querying of relational, XML, and RDF data with XSPARQL</td>
+      <td>Lopes N. et al.</td>
+      <td>ML, DT</td>
+    </tr>
+    <tr>
+      <td>Optique: Towards OBDA Systems for Industry</td>
+      <td>Kharlamov E. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Optique: Zooming in on Big Data</td>
+      <td>Giese M. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>Parallel RDF Generation from Heterogeneous Big Data</td>
+      <td>Haesendonck G. et al</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>Querying the Web of Data with XSPARQL 1.1*</td>
+      <td>Dell’Aglio D. et al.</td>
+      <td>ML, DT</td>
+    </tr>
+    <tr>
+      <td>RDF-Gen: Generating RDF from Streaming and Archival Data</td>
+      <td>Santipantakis G. M. et al.</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>RocketRML - A NodeJS implementation of a use-case specific RML mapper</td>
+      <td>Umutcan Ş. et al.</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>RML: A Generic Language for Integrated RDF Mappings of Heterogeneous Data</td>
+      <td>Dimou A. et al.</td>
+      <td>ML, MT</td>
+    </tr>
+    <tr>
+      <td>R2RML-F: Towards Sharing and Executing Domain Logic in R2RML Mappings</td>
+      <td>Debruyne C. et al.</td>
+      <td>DT</td>
+    </tr>
+    <tr>
+      <td>SDM-RDFizer: An RML Interpreter for the Efficient Creation of RDF Knowledge Graphs</td>
+      <td>Iglesias E. et al.</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>ShExML: improving the usability of heterogeneous data mapping languages for first-time users</td>
+      <td>García-González H. et al.</td>
+      <td>ML</td>
+    </tr>
+    <tr>
+      <td>Sustainable Linked Data Generation: The Case of DBpedia</td>
+      <td>Maroy W. et al.</td>
+      <td>DT</td>
+    </tr>
+    <tr>
+      <td>Squerall: Virtual Ontology-Based Access to Heterogeneous and Large Data Sources</td>
+      <td>Mami M. et al.</td>
+      <td>VT</td>
+    </tr>
+    <tr>
+      <td>The Virtual Knowledge Graph System Ontop</td>
+      <td>Guohui X. et al.</td>
+      <td>ML, VT</td>
+    </tr>
+    <tr>
+      <td>Toward the Web of Functions: Interoperable Higher-Order Functions in SPARQL</td>
+      <td>Atzori M. et al.</td>
+      <td>DT</td>
+    </tr>
+    <tr>
+      <td>Translation of Relational and Non-relational Databases into RDF with xR2RML</td>
+      <td>Michel F. et al.</td>
+      <td>ML, MT, VT</td>
+    </tr>
+    <tr>
+      <td>TripleWave: Spreading RDF Streams on the Web</td>
+      <td>Mauri A. et al.</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>Turning Transport Data to Comply with EU Standards While Enabling a Multimodal Transport Knowledge Graph*</td>
+      <td>Scrocca M. et al.</td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td>XGSN: An Open-source Semantic Sensing Middleware for the Web of Things</td>
+      <td>Calbimonte J. et al.</td>
+      <td>VT</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/survey-website/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Systematic Literature Review of mapping languages</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Systematic Literature Review of mapping languages</li><li><a class="u-email" href="mailto:dylan.vanassche@ugent.be">dylan.vanassche@ugent.be</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.twitter.com/DylanVanAssche"><svg class="svg-icon"><use xlink:href="/survey-website/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DylanVanAssche</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Schema Transformations | Systematic Literature Review of mapping languages</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Schema Transformations" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data." />
+<meta property="og:description" content="Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data." />
+<link rel="canonical" href="https://kg-construct.github.io/survey-website/schema-transformations/" />
+<meta property="og:url" content="https://kg-construct.github.io/survey-website/schema-transformations/" />
+<meta property="og:site_name" content="Systematic Literature Review of mapping languages" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Schema Transformations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data.","headline":"Schema Transformations","url":"https://kg-construct.github.io/survey-website/schema-transformations/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/survey-website/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://kg-construct.github.io/survey-website/feed.xml" title="Systematic Literature Review of mapping languages" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/survey-website/">Systematic Literature Review of mapping languages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/survey-website/">About</a><a class="page-link" href="/survey-website/survey-methodology/">Survey Methodology</a><a class="page-link" href="/survey-website/characteristics/">Characteristics</a><a class="page-link" href="/survey-website/schema-transformations/">Schema Transformations</a><a class="page-link" href="/survey-website/data-transformations/">Data Transformations</a><a class="page-link" href="/survey-website/tools/">Tools</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Schema Transformations</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="dedicated-mapping-languages">Dedicated mapping languages</h2>
+<p>Dedicated mapping languages are based upon dedicated
+mapping language specifications such as R2RML or a custom syntax
+such as YAML or JSON, for transforming heterogeneous data sources into RDF.</p>
+
+<h3 id="rdf-mapping-language-2013">RDF Mapping Language (2013)</h3>
+<p>RDF Mapping Language (<a href="https://rml.io/specs/rml/">RML</a>)
+describes how RDF is generated from heterogeneous data 
+by extending the W3C recommendation R2RML (S5) to heterogeneous data sources.
+RML introduces a Logical Source which describes
+how the input data should be accessed
+and referred to using reference formulations,
+such as JSONPath for JSON or XQuery for XML data.
+Currently, RML supports heterogeneous data sources,
+such as relational databases, CSV/TSV, JSON, XML, Web APIs and streams.
+RML is backwards compatible with R2RML (S1, S4)
+and leverages R2RML’s join support (S6), IRI description (S11),
+subjects, predicates, objects (S10), named graphs (S14), 
+literals with language tags, data types (S12) and blank nodes (S13).
+The input data is used directly,
+without transforming it into an intermediate format (S7).
+RML is aligned with FnO (S2, S4) to describe data transformations
+on the input data.
+Recently, RML was extended with Logical Target
+to describe how and where the generated RDF must be exported to (S3, S4).
+RML cannot handle nested data structures (S8),
+data structures consisting of multiple data formats (S9),
+or collections and containers (S15),
+but an approach is proposed to overcome these limitations.</p>
+
+<h3 id="xr2rml-2015">xR2RML (2015)</h3>
+<p><a href="https://www.i3s.unice.fr/~fmichel/xr2rml_specification_v5.html">xR2RML</a>
+extends R2RML (S1, S5, S10, S11, S12, S13, S14) and RML (S7)
+with additional data sources such as NoSQL databases,
+nested data structures such as XML or JSON (S8) with multiple data formats,
+and collections and containers generation (S15).
+xR2RML allows to combine multiple reference formulations
+when referring to a data value (S9) which is common among NoSQL databases
+where a key-value store may contain XML and JSON data as value.
+xR2RML describes how multiple data sources should be joined (S6).
+xR2RML also supports nested data structures (S8)
+through xR2RML’s Nested Term Maps which allows
+to describe RDFS collections and containers (S15).
+xR2RML describes the RDF Literal’s language tag or data type (S12).
+xR2RML allows to push down data values from a nested data structure
+to make it accessible in lower levels of the nested data structure.
+However, xR2RML does not describe where the generated RDF triples
+must be exported to (S3, S4), or describe data transformations (S2, S4).</p>
+
+<h3 id="d2rml-2018">D2RML (2018)</h3>
+<p>D2RML extends R2RML with a Logical Source to define how the data source
+should be accessed and additionally support for transformations,
+conditions and custom IRI generation functions (S2).
+D2RML abstracts the data model to use a column
+and row approach instead of using the input data directly (S7).
+D2RML supports HTTP Web APIs, CSVs, JSON, and XML data.
+D2RML can describe the generation of subjects, predicates, objects (S10),
+graphs (S14), blank nodes (S13),
+literals with language tags and data types (S12), IRIs (S11),
+and join multiple data sources during the schema transformation (S6),
+because it extends R2RML (S1).
+However, D2RML cannot handle nested data structures (S8),
+heterogeneous data formats (S9),
+describe the generation of collections and containers (S15),
+or describe the output location (S3, S4).</p>
+
+<h3 id="dataset-representation-d-repr-2019">Dataset Representation (D-REPR, 2019)</h3>
+<p>Dataset Representation (D-REPR) (2019)
+is a mapping language based upon a custom YAML syntax (S5)
+for transforming heterogeneous data into RDF.
+D-REPR supports joins (S6) among CSV, XML, JSON, Spreadsheet,
+relational and non-relational databases, and NetCDF files (S8).
+D-REPR represents all data in a JSON tree based structure
+instead of the NRM model used in KR2RML (S7).
+D-REPR does not support multi-path expressions when referring to data (S9).
+D-REPR fully describes the schema transformation (S1, S10, S11, S12, S13, S14)
+and supports data transformations on the input data (S2).
+However, the output description, named graphs, RDF collections and containers,
+and RDF Literal language tags (S15)
+are not specified in the D-REPR mapping rules (S3, S4).</p>
+
+<h2 id="repurposed-mapping-languages">Repurposed mapping languages</h2>
+<p>Mapping languages repurposed syntax from existing specifications
+such as W3C’s SPARQL or W3C’s ShEx,
+for transforming heterogeneous data sources into RDF.</p>
+
+<h3 id="xsparql-2009">XSPARQL (2009)</h3>
+<p><a href="https://www.w3.org/Submission/xsparql-language-specification/">XSPARQL</a>
+is a mapping language that combines XQuery, JSON-LD and R2RML
+with the W3C recommended SPARQL query language (S5)
+for transforming XML data, JSON data, and relational databasedata into RDF (S1).
+XSPARQL not only transforms XML and relational databases into RDF (uplifting),
+but also the other way around (lowering).
+XSPARQL inherits all the features from SPARQL (S2, S10, S11, S12, S13, S14).
+XSPARQL supports joining of nested hierarchy data sources
+by building on top of SPARQL without an intermediate format (S6, S7, S8).
+XSPARQL does not support multi-path expression (S9),
+or specifies to where the generated triples are exported to (S3, S4).
+Built-in and custom data transformations
+are applied using SPARQL Functions (S2).
+XSPARQL supports relational databases and XML, RDF, or JSON files.</p>
+
+<h3 id="sparql-generate-2017">SPARQL-Generate (2017)</h3>
+<p>SPARQL-Generate extends the W3C recommended SPARQL query language (S5)
+to transform heterogeneous data into RDF.
+SPARQL-Generate supports streaming and binary data sources
+such as <a href="https://www.rdfhdt.org">HDT</a>,
+<a href="https://html.spec.whatwg.org/multipage/web-sockets.html#">WebSockets</a>,
+and <a href="https://kafka.apache.org/">Kafka</a>,
+on top of the data sources supported by RML:
+relational databases, XML, JSON, and CSV/TSV data sources.
+SPARQL-Generate can be combined with SPARQL Template Transformation Language
+which can transform RDF graphs into structured text.
+SPARQL-Generate uses the input data directly
+during its schema transformation (S7)
+and can leverage SPARQL functions to execute data transformations
+when applying its schema transformation (S2).
+SPARQL-Generate relies on SPARQL to describe the schema transformation (S1),
+to join heterogeneous data (S6), handle nested hierarchical data (S8),
+generation of subjects, predicates, objects (S10), IRIs (S11),
+named graphs (S14), literals with language tags and data types (S12),
+and blank nodes (S13), collections and containers (S15).
+However, SPARQL-Generate does not specify
+how the RDF must be exported (S3, S4) or how to handle multi-paths (S9).</p>
+
+<h3 id="shape-expressions-mapping-language-shexml-2020">Shape Expressions Mapping Language (ShExML, 2020)</h3>
+<p>Shape Expressions Mapping Language
+(<a href="http://shexml.herminiogarcia.com/spec/">ShExML</a>)
+is a mapping language based upon W3C’s Shape Expressions (ShEx) (S5)
+to transform heterogeneous data into RDF.
+ShExML supports relational databases, CSV, XML and JSON files.
+ShExML describes joins between data sources (S6).
+It does not use an intermediate representation of the input data (S7)
+and can handle nested data structures through its nested iterators (S8).
+ShExML describes how subjects, predicates, objects (S10),graphs (S14),
+RDF’s literal language tags, data types (S12).
+IRIs (S11), and blank nodes (S13) are generated.
+ShExML describes the schema transformation (S1),
+but it cannot describe collections or containers (S15, S4).
+ShExML does not describe to where the generated RDF is exported to (S3, S4),
+or how to handle multi-paths (S9).
+ShExML does not describe data transformations
+to apply on the heterogeneous data (S2, S4).</p>
+
+<h3 id="facade-x-2021">Facade-X (2021)</h3>
+<p>Facade-X overrides SPARQL’s <code class="language-plaintext highlighter-rouge">SERVICE</code> operator (S5)
+to generate RDF from heterogeneous data sources.
+It supports JSON, CSV, HTML, XML, spreadsheets, binary data
+and embedded data such as EXIF in images.
+Facade-X uses the input data directly as
+it follows the approach of W3C’s Direct Mapping recommendation (S7).
+As SPARQL-Generate, it relies on SPARQL for joins (S6) and functions (S2),
+nested data structures (S8), RDF generation (S10, S11, S12, S13, S14),
+and describes the schema transformation (S1).
+However, Facade-X does not specify how the RDF should be exported (S3, S4),
+or how to handle multi-paths (S9).</p>
+
+<h2 id="table">Table</h2>
+
+<!-- Table -->
+<div style="text-align: center;">
+<em><strong>Table 1:</strong>
+Characteristics S1 until F15 for schema transformations.</em>
+</div>
+
+<table id="schema-transformations-t1" class="display">
+  <thead>
+    <tr>
+      <th>Schema Transformation</th>
+      <th>S1: Schema transformation</th>
+      <th>S2: Data transformation</th>
+      <th>S3: Export description</th>
+      <th>S4: End-to-End</th>
+      <th>S5: Web standards integration</th>
+      <th>S6: Joins</th>
+      <th>S7: Intermediate representation</th>
+      <th>S8: Nested hierarchies</th>
+      <th>S9: Multi-paths</th>
+      <th>S10: RDF triples</th>
+      <th>S11: IRIs</th>
+      <th>S12: Literals</th>
+      <th>S13: Blank Nodes</th>
+      <th>S14: Named graphs</th>
+      <th>S15: Collections and containers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RML</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>xR2RML</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>D2RML</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>D-REPR</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td>
+<img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20">*</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>XSPARQL</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>SPARQL-Generate</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>ShExML</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Facade-X</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- DataTables setup -->
+<!-- DataTables JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.datatables.net/autofill/2.3.9/js/dataTables.autoFill.min.js"></script>
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/autofill/2.3.9/css/autoFill.dataTables.min.css">
+
+<!-- DataTables configuration -->
+<script>
+$(document).ready(function() {
+    var data_transformations_t1 = $('#schema-transformations-t1').dataTable( {
+        scrollY: 400,
+        scrollX: 600,
+        scrollCollapse: true,
+        paging: false,
+        autoFill: true,
+        bFilter: false,
+        bSort: false,
+    } );
+} );
+</script>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/survey-website/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Systematic Literature Review of mapping languages</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Systematic Literature Review of mapping languages</li>
+<li><a class="u-email" href="mailto:dylan.vanassche@ugent.be">dylan.vanassche@ugent.be</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list"><li><a href="https://www.twitter.com/DylanVanAssche"><svg class="svg-icon"><use xlink:href="/survey-website/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DylanVanAssche</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

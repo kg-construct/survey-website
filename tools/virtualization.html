@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Virtualization Tools | Systematic Literature Review of mapping languages</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Virtualization Tools" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data." />
+<meta property="og:description" content="Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data." />
+<link rel="canonical" href="https://kg-construct.github.io/survey-website/tools/virtualization" />
+<meta property="og:url" content="https://kg-construct.github.io/survey-website/tools/virtualization" />
+<meta property="og:site_name" content="Systematic Literature Review of mapping languages" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Virtualization Tools" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data.","headline":"Virtualization Tools","url":"https://kg-construct.github.io/survey-website/tools/virtualization"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/survey-website/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://kg-construct.github.io/survey-website/feed.xml" title="Systematic Literature Review of mapping languages" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+<a class="site-title" rel="author" href="/survey-website/">Systematic Literature Review of mapping languages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+<a class="page-link" href="/survey-website/">About</a><a class="page-link" href="/survey-website/survey-methodology/">Survey Methodology</a><a class="page-link" href="/survey-website/characteristics/">Characteristics</a><a class="page-link" href="/survey-website/schema-transformations/">Schema Transformations</a><a class="page-link" href="/survey-website/data-transformations/">Data Transformations</a><a class="page-link" href="/survey-website/tools/">Tools</a>
+</div>
+      </nav>
+</div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Virtualization Tools</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="virtualization-tools">Virtualization tools</h2>
+
+<h3 id="morph-rdb-extension-2010">Morph-RDB extension (2010)</h3>
+<p>Morph-RDB extension enables Ontology-Based Data Access
+to streaming data sources by extending R<sub>2</sub>O mapping rules
+with streaming support (S<sub>2</sub>O mapping rules) (T5)
+and querying these data sources with SPARQLStream (T13a).
+Morph-RDB’s SPARQLStream is inspired
+by C-SPARQL and SNEEql but with support
+for streaming windows and SPARQL 1.1 aggregates.
+Morph-RDB transforms SPARQLStream queries into SNEE queries (SNEEql),
+the SNEE engine executes the query on the data sources.
+Morph-RDB generates the triples
+to answer the SPARQLStream query and returns them (T3, T4).
+The S<sub>2</sub>O mappings are used to transform
+the SNEE query results back into RDF (T4).
+Morph-RDB supports files in CSV format,
+SQL query results of relational databases and sensor streams (T1, T2).
+Morph-RDB does not support any data transformations (T6) or federation (T13b)
+and is written in Scala (T8).
+Morph-RDB is accessible as a CLI implementation
+and provides a Docker image (T9, T10).
+MorphRDB’s extension is released (T12) under the Apache License 2.0 (T11).</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/oeg-upm/morph-rdb">https://github.com/oeg-upm/morph-rdb</a>
+<br>
+<strong>Last accessed</strong> : 23/02/2022
+<br>
+<strong>Date last commit on default branch</strong> :  08/05/2021</p>
+
+<h3 id="ontop-v411-2013">Ontop v4.1.1 (2013)</h3>
+<p>Ontop virtualizes access to relational SQL databases and OpenGIS
+by translating SPARQL queries into SQL queries.
+It leverages R2RML mapping rules or Ontop Mapping Language (T5)
+to perform this translation, and extensions for accessing OpenGIS data (T1, T2).
+Generated triples are returned as SPARQL query results (T3, T4).
+Ontop does not support data transformations (T6), advanced SPARQL features
+such as property path, existential queries with <code class="language-plaintext highlighter-rouge">NOT EXIST</code>,
+or basic query federation with <code class="language-plaintext highlighter-rouge">SERVICE</code> (T13b).
+However, efforts such as
+<a href="https://ontop-vkg.org/tutorial/federation/denodo/">Denodo</a>,
+<a href="https://ontop-vkg.org/tutorial/federation/dremio/">Dremio</a>,
+or <a href="https://ontop-vkg.org/tutorial/federation/teiid/">Teiid</a>
+extend Ontop with federation support (T13b).
+Ontop uses an Intermediate Query language (T13a)
+with well known SQL optimizations,
+such as (i) redundant join elimination and pushing down joins to the datalevel,
+and (ii) virtualization-specific optimizations for SQL derived
+from the <code class="language-plaintext highlighter-rouge">OPTIONAL</code> and <code class="language-plaintext highlighter-rouge">MINUS SPARQL</code> constructs (T10e).
+Ontop translates SPARQL aggregates to SQL aggregates
+for the database engine to perform the aggregation (T13a).
+Ontop supports ontological entailment by relying
+on a mapping saturation approach:
+in an offline phase, the mapping rules are saturated with the ontology rules,
+meaning additional mapping rules are generated for entailed triples.
+In previous generations of Ontop,
+ontological entailment was supported with a query rewriting approach
+using the PerfectRef algorithm,
+but that was abandoned as mapping saturation proved more efficient.
+Ontop supports entailment for RDFS and OWL 2 QL,
+and has experimental support for entailment with SWRL rules (T13a).
+Ontop has been integrated in the Optique Platform (2013) 
+to access data such as relational databases, triple stores, 
+temporal databases, data streams, etc. 
+Optique leverages User Defined Functions as data transformation 
+for accessing external data sources, windowing, data mining. 
+However, Optique is not publicly available.
+Ontop is available as a CLI implementation and Docker image (T9, T10).
+Ontop is written in Java (T8) and released (T12) under Apache License 2.0 (T11).</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/ontop/ontop">https://github.com/ontop/ontop</a>
+<br>
+<strong>Last accessed</strong> : 23/02/2022
+<br>
+<strong>Date last commit on default branch</strong> : 21/03/2022</p>
+
+<h3 id="xgsn-v201-2014">XGSN v2.0.1 (2014)</h3>
+<p>XGSN leverages Global Sensor Networks (GSN) middleware
+to provide virtualization over Internet of Things sensors
+using the W3C recommended SSN ontology (T5).
+XGSN uses wrappers to interface with sensors
+such as UDP, serial, HTTP, MQTT, etc. (T1, T2, T6).
+Data transformations are applied in the data wrappers
+when accessing the input data (T7).
+XGSN configures each sensor using a custom XML document
+to specify the wrapper, sampling rate, storage size,
+and which sensor values to expose through the SSN ontology.
+While XGSN can access heterogeneous data from various sensors,
+it is limited to sensor data only.
+XGSN allows to use different RDF stream processors (T13a)
+– such as CQELS – which provide a SPARQL interface
+to access the RDF graphs (T3, T4).
+XGSN does not support federation (T13b).
+XGSN is written in Java (T8) as a CLI implementation
+and can be accessed through a webapp and an API (T9, T10).
+XGSN is available on Github (T12)
+under the GNU General Public License v3.0 (T11).</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/LSIR/gsn">https://github.com/LSIR/gsn</a>
+<br>
+<strong>Last accessed</strong> : 23/02/2022
+<br>
+<strong>Date last commit on default branch</strong> : 12/03/2017</p>
+
+<h3 id="morph-rdb-v3125-2014">Morph-RDB v3.12.5 (2014)</h3>
+<p>Morph-RDB – also discussed as materialization implementation –
+supports virtualization for relational databases such as MySQL, PostgresSQL, 
+H2, and MonetDB or files in CSV format (T1, T2)
+through R2RML mapping rules (T5).
+Morph-RDB translates unions,
+filters and aggregation from SPARQL to SQL
+to reduce the client-side processing (T13a).
+MorphRDB applies two types of well-known optimizations (T13a)
+on SQL queries: (i) self-join elimination, and (ii) subquery elimination.
+Morph-RDB does not use an intermediate query language,
+nor does it supports data transformations (T6, T7),
+ontology entailment (T13a), and federation (T13b).
+MorphRDB is accessible as a CLI implementation written in Scala (T8)
+and provides a Docker image (T9, T10).
+Morph-RDB is released (T12) under Apache License 2.0 (T11).</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/oeg-upm/morph-rdb">https://github.com/oeg-upm/morph-rdb</a>
+<br>
+<strong>Last accessed</strong> : 23/02/2022
+<br>
+<strong>Date last commit on default branch</strong> : 08/05/2021</p>
+
+<h3 id="morph-xr2rml-v131-2015">Morph-xR2RML v1.3.1 (2015)</h3>
+<p>Morph-xR2RML - also discussed materialization implementation -
+is a fork or Morph-RDB which translates SPARQL queries
+into SQL queries and MongoDB queries
+using xR2RML mapping rules (T1, T2, T5, T13a).
+Morph-xR2RML does not
+support data transformations (T6)
+and not all operators of SPARQL such as joins and some filters,
+therefore the query is translated in two steps:
+(i) an abstract query is generated from the SPARQL query
+using the xR2RML mapping rules.
+(ii) the abstract query is translated into MongoDB queries.
+Untranslated parts of the query are processed by xR2RML client-side. 
+Morph-xR2RML provides a CLI implementation written in Scala (T8)
+or as a SPARQL endpoint (T9, T10)
+and is available (T12) under Apache License 2.0 (T11).</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/frmichel/morph-xr2rml">https://github.com/frmichel/morph-xr2rml</a>
+<br>
+<strong>Last accessed</strong> : 23/02/2022
+<br>
+<strong>Date last commit on default branch</strong> : 13/01/2022</p>
+
+<h3 id="sparqlmap-m-v074-2016">SparqlMap-M v0.7.4 (2016)</h3>
+<p>SparqlMap-M is an extension of SparqlMap
+to provide virtualization over CSV files,
+relational databases, and non-relational databases
+using R2RML mapping rules (T5).
+SparqlMap-M extends R2RML to support data transformations and conditions (T6)
+which are executed during the schema transformation (T7).
+SparqlMap-M analyses SPARQL queries to reduce the R2RML mappings
+to the minimum for answering the query
+and translates to SQL to execute the query on the the database engine (T13a).
+SparqlMap-M does not implement support for SPARQL Federated Queries (T13b).
+SparqlMap-M is written in Java (T8)
+and available as a CLI implementation
+or SPARQL endpoint on Github without a license (T9, T10, T11, T12).</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/tomatophantastico/sparqlmap">https://github.com/tomatophantastico/sparqlmap</a>
+<br>
+<strong>Last accessed</strong> : 23/02/2022
+<br>
+<strong>Date last commit on default branch</strong> : 31/08/2017</p>
+
+<h3 id="morph-streams-v1010-2016">Morph-streams++ v1.0.10 (2016)</h3>
+<p>Morph-streams++ is the successor of the extended Morph-RDB
+and leverages SPARQL<sub>Stream</sub> queries.
+Morph-streams++ uses existing Distributed Stream Management Systems (DSMS)
+to execute SPARQL<sub>Stream</sub> queries with R2RML mapping rules (T5).
+The SPARQLStream queries are first translated into queries
+supported by the underlying DSMS and
+its results are translated into RDF with R2RML mapping rules (T13a).
+Generated RDF graphs are returned as SPARQLStream query results (T3, T4).
+Supported data sources and formats in Morphstreams++
+depend on the underlying DSM:
+currently the <a href="http://www.espertech.com/esper">Esper</a>
+and Global Sensors Network (GSN) (T1, T2) are supported by Morph-streams++.
+Morph-streams++ does not support any data transformations (T6, T7),
+or federation (T13b).
+Morph-streams++ is written in Scala (T8) and released (T12)
+as a CLI implementation without license (T9, T10, T11).</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/jpcik/morph-streams">https://github.com/jpcik/morph-streams</a>
+<br>
+<strong>Last accessed</strong> : 23/02/2022
+<br>
+<strong>Date last commit on default branch</strong> :  28/09/2016</p>
+
+<h3 id="squerall-v02-2019">Squerall v0.2 (2019)</h3>
+<p>Squerall answers SPARQL queries over heterogeneous data sources
+that are mapped to RDF with RML (T5) and FnO functions (T6).
+Squerall leverages the distributed data processing systems Spark or Presto:
+both systems use an internal tabular data format
+into which different data sources can be (virtually) integrated.
+Spark and Presto allow the manipulation of
+multiple heterogeneous data sources in a uniform, SQL(-like) manner.
+Squerall translates SPARQL queries into Spark’s
+or Presto’s SQL queries for execution (T13a).
+Squerall applies FnO functions during
+its schema transformation with RML mapping rules (T7).
+Squerall only supports translation of SPARQL aggregations;
+other SPARQL operators are considered future work (T13a).
+Squerall can access Apache Parquet, CSV files,
+relational databases with JDBC connectors,
+and non-relational databases, such as MongoDB, Elasticsearch,
+or Couchbase (T1, T2).
+Squerall is written in Java (T8)
+and available under Apache License 2.0 (T12)
+as a CLI implementation and via a GUI (T9, T10).</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/EIS-Bonn/Squerall">https://github.com/EIS-Bonn/Squerall</a>
+<br>
+<strong>Last accessed</strong> : 23/02/2022
+<br>
+<strong>Date last commit on default branch</strong> :  10/09/2021</p>
+
+<h3 id="ontario-2019">Ontario (2019)</h3>
+<p>Ontario provides virtualization over a set of SPARQL endpoints
+and non-SPARQL database interfaces using RML mapping rules (T5).
+It translates queries into star shaped subqueries (T13a)
+and are combined with RML mapping rules
+to select the right SPARQL endpoint to answer the subquery.
+The results of each subquery are joined locally (T13a).
+Ontario supports SPARQL endpoints, relational databases,
+such as MySQL, files (locally or on Apache Hadoop)
+in CSV, TSV, and XML format, and non-relational databases
+such as MongoDB and graph databases, such as Neo4J (T1, T2).
+It implements SPARQL Federated Queries via SPARQL’s <code class="language-plaintext highlighter-rouge">SERVICE</code> operator (T13b),
+but it does not support data transformations (T6).
+Ontario is written in Python (T8) available as CLI implementation
+under the General Public License 2.0 (T9, T10, T11 T12).</p>
+
+<p><strong>Source code</strong> : <a href="https://github.com/SDM-TIB/Ontario">https://github.com/SDM-TIB/Ontario</a>
+<br>
+<strong>Last accessed</strong> : 23/02/2022
+<br>
+<strong>Date last commit on default branch</strong> : 09/03/2021</p>
+
+<h3 id="obi-wan-2020">Obi-Wan (2020)</h3>
+<p>Obi-Wan is a Java-based (T8) virtualization implementation
+for data stored in relational and non-relational databases.
+Obi-Wan uses a custom GlobalLocal As View (GLAV) mapping language (T5)
+to link heterogeneous data to an RDF representation.
+Obi-Wan supports relational databases e.g. PostgreSQL,
+non-relational databases e.g. MongoDB, Redis,
+and triple stores e.g. Jena TDB (T1, T2).
+Obi-Wan supports multiple entailment strategies
+such as query rewriting, mapping saturation,
+and hybrid rewriting-saturation (T13a).
+Obi-Wan returns the generated triples as SPARQL query results (T3, T4).
+To the best of our knowledge,
+Obi-Wan does not support data transformations (T6, T7),
+or SPARQL Federated Queries (T13b).
+ObiWan is available as CLI implementation and webapp
+on Gitlab under MIT license (T9, T10, T11 T12).</p>
+
+<p><strong>Source code</strong> : <a href="https://gitlab.inria.fr/cedar/obi-wan">https://gitlab.inria.fr/cedar/obi-wan</a>
+<br>
+<strong>Last accessed</strong> : 23/02/2022
+<br>
+<strong>Date last commit on default branch</strong> : 22/10/2021</p>
+
+<h2 id="tables">Tables</h2>
+
+<!-- T1 -->
+<div style="text-align: center;">
+<em><strong>Table 1:</strong>
+T1: Datasource characteristic for each virtualization tool.</em>
+</div>
+
+<table id="virtualization-t1" class="display">
+  <thead>
+    <tr>
+      <th>T1: Data source</th>
+      <th>Morph-streams++</th>
+      <th>Ontop</th>
+      <th>Morph-RDB</th>
+      <th>Morph-xR2RML</th>
+      <th>SparqlMap-M</th>
+      <th>Squerall</th>
+      <th>Ontario</th>
+      <th>Morph-RDB extension</th>
+      <th>Obi-Wan</th>
+      <th>XGSN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>File</td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SQL RDB</td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>NoSQL DB</td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>OpenGIS</td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Graph DB</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Triple Store</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Kafka stream</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>WebSocket stream</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>MQTT stream</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TCP stream</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>UDP stream</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>SPARQL endpoint</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Web API</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Apache Hadoop</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Esper</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>GSN</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>Apache Parquet</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Serial</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>CoAP</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>USB</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- T2 -->
+<div style="text-align: center;">
+<em><strong>Table 2:</strong>
+T2: Data format characteristic for each virtualization tool.</em>
+</div>
+<table id="virtualization-t2" class="display">
+  <thead>
+    <tr>
+      <th>T2: Data formats</th>
+      <th>Morph-streams++</th>
+      <th>Ontop</th>
+      <th>Morph-RDB</th>
+      <th>Morph-xR2RML</th>
+      <th>SparqlMap-M</th>
+      <th>Squerall</th>
+      <th>Ontario</th>
+      <th>Morph-RDB extension</th>
+      <th>Obi-Wan</th>
+      <th>XGSN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CSV format</td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>JSON format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>XML format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>TSV format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ODS format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>XLSX format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>GeoJSON format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>KML format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Shapefiles</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SQL query</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>NoSQL query</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SPARQL query</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CBOR format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>HDT format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>RDF format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>plain text</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>HTML format</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Archives</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Neo4J graph</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>EXIF encoded</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>RSS</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>ESRI Grid ASCII</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>Images</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- T3 -->
+<div style="text-align: center;">
+<em><strong>Table 3:</strong>
+T3 &amp; T4: Output data &amp; formats characteristic for each virtualization tool.</em>
+</div>
+<table id="virtualization-t3" class="display">
+  <thead>
+    <tr>
+      <th>T3: Output Data &amp; T4: Output Data formats</th>
+      <th>Morph-streams++</th>
+      <th>Ontop</th>
+      <th>Morph-RDB</th>
+      <th>Morph-xR2RML</th>
+      <th>SparqlMap-M</th>
+      <th>Squerall</th>
+      <th>Ontario</th>
+      <th>Morph-RDB extension</th>
+      <th>Obi-Wan</th>
+      <th>XGSN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SPARQL Stream query result</td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SPARQL query result</td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+    <tr>
+      <td>CQELS query result</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- T4 -->
+<div style="text-align: center;">
+<em><strong>Table 4:</strong>
+Characteristics T5 until T13b for each virtualization tool.
+T5: Schema transformation language, T6: Data transformation language,
+T7: Applicability, T8: Programming language, T9: Integration, T10: Interface,
+T11: License, T12: Repository, T13a: Features, T13b: Federation.</em>
+</div>
+<table id="virtualization-t4" class="display">
+  <thead>
+    <tr>
+      <th>Virtualization implementation</th>
+      <th>T5</th>
+      <th>T6</th>
+      <th>T7</th>
+      <th>T8</th>
+      <th>T9 and<br>T10</th>
+      <th>T11</th>
+      <th>T13a</th>
+      <th>T13b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ontop</td>
+      <td>R2RML or Ontop Mapping Language</td>
+      <td>No</td>
+      <td>NA</td>
+      <td>Java</td>
+      <td>CLI</td>
+      <td>Apache-2.0</td>
+      <td>SQL &amp; virtualization optimizations, aggregation on databases, ontological entailement</td>
+      <td>with Denodo, Dremio or Teiid</td>
+    </tr>
+    <tr>
+      <td>Morph-RDB</td>
+      <td>R2RML</td>
+      <td>No</td>
+      <td>NA</td>
+      <td>Scala</td>
+      <td>CLI, Docker</td>
+      <td>Apache-2.0</td>
+      <td>SQL optimizations</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Morph-xR2RML</td>
+      <td>xR2RML</td>
+      <td>No</td>
+      <td>NA</td>
+      <td>Scala</td>
+      <td>CLI, SPARQL end-point</td>
+      <td>Apache-2.0</td>
+      <td>Inherited from Morph-RDB</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>SparqlMap-M</td>
+      <td>R2RML</td>
+      <td>R2RML custom extension</td>
+      <td>together, during schema transformation</td>
+      <td>Java</td>
+      <td>CLI, SPARQL end-point</td>
+      <td>No license</td>
+      <td>Query normalization &amp; analysis, mapping binding, execute on database engine</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Squerall</td>
+      <td>RML</td>
+      <td>FnO</td>
+      <td>together, during schema transformation</td>
+      <td>Java</td>
+      <td>CLI, GUI</td>
+      <td>Apache-2.0</td>
+      <td>Spark or Presto processing, aggregation on data sources</td>
+      <td>with Spark or Presto</td>
+    </tr>
+    <tr>
+      <td>Ontario</td>
+      <td>RML</td>
+      <td>No</td>
+      <td>NA</td>
+      <td>Python</td>
+      <td>CLI</td>
+      <td>GPL-2.0</td>
+      <td>Star shape subqueries on data sources, locally joined</td>
+      <td>SPARQL federation</td>
+    </tr>
+    <tr>
+      <td>Morph-RDB extension</td>
+      <td>S 2 O</td>
+      <td>No</td>
+      <td>NA</td>
+      <td>Scala</td>
+      <td>CLI, Docker</td>
+      <td>Apache-2.0</td>
+      <td>Inherited from Morph-RDB</td>
+      <td>with SNEEql</td>
+    </tr>
+    <tr>
+      <td>XGSN</td>
+      <td>SSN ontology</td>
+      <td>Hardcoded in wrapper</td>
+      <td>together, pre-processing of input data</td>
+      <td>Java</td>
+      <td>CLI, webapp, API</td>
+      <td>GPL-3.0</td>
+      <td>Access delegated to RDF stream processor</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Obi-Wan</td>
+      <td>custom GLAV mapping</td>
+      <td>No</td>
+      <td>NA</td>
+      <td>Java</td>
+      <td>CLI, webapp</td>
+      <td>MIT</td>
+      <td>Ontology entailment</td>
+      <td>with Tatooine</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- DataTables setup -->
+<!-- DataTables JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.datatables.net/autofill/2.3.9/js/dataTables.autoFill.min.js"></script>
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
+<link rel="stylesheet" href="https://cdn.datatables.net/autofill/2.3.9/css/autoFill.dataTables.min.css">
+
+<!-- DataTables configuration -->
+<script>
+$(document).ready(function() {
+    var virtualization_t1 = $('#virtualization-t1').dataTable( {
+        scrollY: 400,
+        scrollX: 600,
+        scrollCollapse: true,
+        paging: false,
+        autoFill: true,
+        bFilter: false,
+        bSort: false,
+    } );
+
+    var virtualization_t2 = $('#virtualization-t2').dataTable( {
+        scrollY: 400,
+        scrollX: 600,
+        scrollCollapse: true,
+        paging: false,
+        autoFill: true,
+        bFilter: false,
+        bSort: false
+    } );
+
+    var virtualization_t3 = $('#virtualization-t3').dataTable( {
+        scrollY: 400,
+        scrollX: 600,
+        scrollCollapse: true,
+        paging: false,
+        autoFill: true,
+        bFilter: false,
+        bSort: false
+    } );
+
+    var virtualization_t4 = $('#virtualization-t4').dataTable( {
+        scrollY: 400,
+        scrollX: 600,
+        scrollCollapse: true,
+        paging: false,
+        autoFill: true,
+        bFilter: false,
+        bSort: false
+    } );
+} );
+</script>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/survey-website/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Systematic Literature Review of mapping languages</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Systematic Literature Review of mapping languages</li>
+<li><a class="u-email" href="mailto:dylan.vanassche@ugent.be">dylan.vanassche@ugent.be</a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+<ul class="social-media-list"><li><a href="https://www.twitter.com/DylanVanAssche"><svg class="svg-icon"><use xlink:href="/survey-website/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DylanVanAssche</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Systematic Literature Review of the latest 20 years research around knowledge graph construction from (semi)-structured heterogeneous data.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
